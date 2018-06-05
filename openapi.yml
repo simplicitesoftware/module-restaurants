@@ -1,0 +1,1762 @@
+components:
+  securitySchemes:
+    basicAuth:
+      scheme: basic
+      type: http
+    bearerAuth:
+      bearerFormat: Simplicite token
+      scheme: bearer
+      type: http
+servers:
+- url: https://dev40.dev.simplicite.io/api
+openapi: 3.0.0
+paths:
+  /rest/RstComments/{row_id}:
+    post:
+      security:
+      - bearerAuth: []
+      description: Create business object record
+      operationId: obj-rstcomments-create
+      responses:
+        '200':
+          description: Created business object record
+          content:
+            application/json: {}
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID
+        required: true
+      - schema:
+          type: string
+        in: query
+        name: rstCmtDateTime
+        description: Date time
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstCmtEmail
+        description: Email
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstCmtRstId
+        description: Restaurant
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstCmtRstId__rstRstName
+        description: Restaurant name
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstCmtRstId__rstRstAddress
+        description: Address
+        required: false
+      - schema:
+          type: string
+          enum:
+          - AL
+          - AK
+          - AZ
+          - AR
+          - CA
+          - CO
+          - CT
+          - DE
+          - DC
+          - FL
+          - GA
+          - HI
+          - ID
+          - IL
+          - IN
+          - IA
+          - KS
+          - KY
+          - LA
+          - ME
+          - MD
+          - MA
+          - MI
+          - MN
+          - MS
+          - MO
+          - MT
+          - NE
+          - NV
+          - NH
+          - NJ
+          - NM
+          - NY
+          - NC
+          - ND
+          - OH
+          - OK
+          - OR
+          - PA
+          - RI
+          - SC
+          - SD
+          - TN
+          - TX
+          - UT
+          - VT
+          - VA
+          - WA
+          - WV
+          - WI
+          - WY
+        in: query
+        name: rstCmtRstId__rstRstState
+        description: State
+        required: false
+      - schema:
+          type: string
+          enum:
+          - '100'
+          - '75'
+          - '50'
+          - '25'
+          - '0'
+        in: query
+        name: rstCmtEval
+        description: Evaluation
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: rstCmtSentiment
+        description: Sentiment
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstCmtComments
+        description: Comments
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstCmtCommentsInEnglish
+        description: Comments (translated)
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstCmtTones
+        description: Tones
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: rstCmtVisible
+        description: Visible ?
+        required: false
+      tags:
+      - RstComments
+    get:
+      security:
+      - bearerAuth: []
+      description: Get business object record
+      operationId: obj-rstcomments-get
+      responses:
+        '200':
+          description: Business object record
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID
+        required: true
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_documents
+        description: Inline documents?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_objects
+        description: Inline objects?
+        required: false
+      tags:
+      - RstComments
+    delete:
+      security:
+      - bearerAuth: []
+      description: Delete business object record
+      operationId: obj-rstcomments-delete
+      responses:
+        '200':
+          description: Business object deletion confirmation
+          content:
+            application/json: {}
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID
+        required: true
+      tags:
+      - RstComments
+    put:
+      security:
+      - bearerAuth: []
+      description: Update business object record
+      operationId: obj-rstcomments-update
+      responses:
+        '200':
+          description: Updated business object record
+          content:
+            application/json: {}
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID
+        required: true
+      - schema:
+          type: string
+        in: query
+        name: rstCmtDateTime
+        description: Date time
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstCmtEmail
+        description: Email
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstCmtRstId
+        description: Restaurant
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstCmtRstId__rstRstName
+        description: Restaurant name
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstCmtRstId__rstRstAddress
+        description: Address
+        required: false
+      - schema:
+          type: string
+          enum:
+          - AL
+          - AK
+          - AZ
+          - AR
+          - CA
+          - CO
+          - CT
+          - DE
+          - DC
+          - FL
+          - GA
+          - HI
+          - ID
+          - IL
+          - IN
+          - IA
+          - KS
+          - KY
+          - LA
+          - ME
+          - MD
+          - MA
+          - MI
+          - MN
+          - MS
+          - MO
+          - MT
+          - NE
+          - NV
+          - NH
+          - NJ
+          - NM
+          - NY
+          - NC
+          - ND
+          - OH
+          - OK
+          - OR
+          - PA
+          - RI
+          - SC
+          - SD
+          - TN
+          - TX
+          - UT
+          - VT
+          - VA
+          - WA
+          - WV
+          - WI
+          - WY
+        in: query
+        name: rstCmtRstId__rstRstState
+        description: State
+        required: false
+      - schema:
+          type: string
+          enum:
+          - '100'
+          - '75'
+          - '50'
+          - '25'
+          - '0'
+        in: query
+        name: rstCmtEval
+        description: Evaluation
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: rstCmtSentiment
+        description: Sentiment
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstCmtComments
+        description: Comments
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstCmtCommentsInEnglish
+        description: Comments (translated)
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstCmtTones
+        description: Tones
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: rstCmtVisible
+        description: Visible ?
+        required: false
+      tags:
+      - RstComments
+  /rest/RstLocation/{row_id}:
+    post:
+      security:
+      - bearerAuth: []
+      description: Create business object record
+      operationId: obj-rstlocation-create
+      responses:
+        '200':
+          description: Created business object record
+          content:
+            application/json: {}
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID
+        required: true
+      - schema:
+          type: string
+        in: query
+        name: rstLocName
+        description: Name
+        required: false
+      - schema:
+          type: string
+          enum:
+          - AL
+          - AK
+          - AZ
+          - AR
+          - CA
+          - CO
+          - CT
+          - DE
+          - DC
+          - FL
+          - GA
+          - HI
+          - ID
+          - IL
+          - IN
+          - IA
+          - KS
+          - KY
+          - LA
+          - ME
+          - MD
+          - MA
+          - MI
+          - MN
+          - MS
+          - MO
+          - MT
+          - NE
+          - NV
+          - NH
+          - NJ
+          - NM
+          - NY
+          - NC
+          - ND
+          - OH
+          - OK
+          - OR
+          - PA
+          - RI
+          - SC
+          - SD
+          - TN
+          - TX
+          - UT
+          - VT
+          - VA
+          - WA
+          - WV
+          - WI
+          - WY
+        in: query
+        name: rstLocState
+        description: State
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstLocDescription
+        description: Description
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstLocCoordinates
+        description: Coordinates
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: rstLocExtent
+        description: Extent (mi)
+        required: false
+      tags:
+      - RstLocation
+    get:
+      security:
+      - bearerAuth: []
+      description: Get business object record
+      operationId: obj-rstlocation-get
+      responses:
+        '200':
+          description: Business object record
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID
+        required: true
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_documents
+        description: Inline documents?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_objects
+        description: Inline objects?
+        required: false
+      tags:
+      - RstLocation
+    delete:
+      security:
+      - bearerAuth: []
+      description: Delete business object record
+      operationId: obj-rstlocation-delete
+      responses:
+        '200':
+          description: Business object deletion confirmation
+          content:
+            application/json: {}
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID
+        required: true
+      tags:
+      - RstLocation
+    put:
+      security:
+      - bearerAuth: []
+      description: Update business object record
+      operationId: obj-rstlocation-update
+      responses:
+        '200':
+          description: Updated business object record
+          content:
+            application/json: {}
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID
+        required: true
+      - schema:
+          type: string
+        in: query
+        name: rstLocName
+        description: Name
+        required: false
+      - schema:
+          type: string
+          enum:
+          - AL
+          - AK
+          - AZ
+          - AR
+          - CA
+          - CO
+          - CT
+          - DE
+          - DC
+          - FL
+          - GA
+          - HI
+          - ID
+          - IL
+          - IN
+          - IA
+          - KS
+          - KY
+          - LA
+          - ME
+          - MD
+          - MA
+          - MI
+          - MN
+          - MS
+          - MO
+          - MT
+          - NE
+          - NV
+          - NH
+          - NJ
+          - NM
+          - NY
+          - NC
+          - ND
+          - OH
+          - OK
+          - OR
+          - PA
+          - RI
+          - SC
+          - SD
+          - TN
+          - TX
+          - UT
+          - VT
+          - VA
+          - WA
+          - WV
+          - WI
+          - WY
+        in: query
+        name: rstLocState
+        description: State
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstLocDescription
+        description: Description
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstLocCoordinates
+        description: Coordinates
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: rstLocExtent
+        description: Extent (mi)
+        required: false
+      tags:
+      - RstLocation
+  /rest/RstLocation:
+    get:
+      security:
+      - bearerAuth: []
+      description: Get business object metadata or search records
+      operationId: obj-rstlocation-search
+      responses:
+        '200':
+          description: Business object metadata or records of search result
+          content:
+            application/json: {}
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      parameters:
+      - schema:
+          type: boolean
+        in: query
+        name: _metadata
+        description: Metadata?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _doc
+        description: Documentation?
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstLocName
+        description: Search filter for Name
+        required: false
+      - schema:
+          type: string
+          enum:
+          - AL
+          - AK
+          - AZ
+          - AR
+          - CA
+          - CO
+          - CT
+          - DE
+          - DC
+          - FL
+          - GA
+          - HI
+          - ID
+          - IL
+          - IN
+          - IA
+          - KS
+          - KY
+          - LA
+          - ME
+          - MD
+          - MA
+          - MI
+          - MN
+          - MS
+          - MO
+          - MT
+          - NE
+          - NV
+          - NH
+          - NJ
+          - NM
+          - NY
+          - NC
+          - ND
+          - OH
+          - OK
+          - OR
+          - PA
+          - RI
+          - SC
+          - SD
+          - TN
+          - TX
+          - UT
+          - VT
+          - VA
+          - WA
+          - WV
+          - WI
+          - WY
+        in: query
+        name: rstLocState
+        description: Search filter for State
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstLocDescription
+        description: Search filter for Description
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstLocCoordinates
+        description: Search filter for Coordinates
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: rstLocExtent
+        description: Search filter for Extent (mi)
+        required: false
+      tags:
+      - RstLocation
+  /login:
+    get:
+      security:
+      - basicAuth: []
+      description: Login
+      operationId: login
+      responses:
+        '200':
+          description: User token
+          content:
+            application/json: {}
+            text/plain: {}
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      parameters:
+      - schema:
+          type: string
+          enum:
+          - json
+          - oauth2
+        in: query
+        name: _output
+        description: Optional output format
+        required: false
+      tags:
+      - Application
+  /rest/RstRestaurant:
+    get:
+      security:
+      - bearerAuth: []
+      description: Get business object metadata or search records
+      operationId: obj-rstrestaurant-search
+      responses:
+        '200':
+          description: Business object metadata or records of search result
+          content:
+            application/json: {}
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      parameters:
+      - schema:
+          type: boolean
+        in: query
+        name: _metadata
+        description: Metadata?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _doc
+        description: Documentation?
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstRstName
+        description: Search filter for Name
+        required: false
+      - schema:
+          type: string
+          enum:
+          - AL
+          - AK
+          - AZ
+          - AR
+          - CA
+          - CO
+          - CT
+          - DE
+          - DC
+          - FL
+          - GA
+          - HI
+          - ID
+          - IL
+          - IN
+          - IA
+          - KS
+          - KY
+          - LA
+          - ME
+          - MD
+          - MA
+          - MI
+          - MN
+          - MS
+          - MO
+          - MT
+          - NE
+          - NV
+          - NH
+          - NJ
+          - NM
+          - NY
+          - NC
+          - ND
+          - OH
+          - OK
+          - OR
+          - PA
+          - RI
+          - SC
+          - SD
+          - TN
+          - TX
+          - UT
+          - VT
+          - VA
+          - WA
+          - WV
+          - WI
+          - WY
+        in: query
+        name: rstRstState
+        description: Search filter for State
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstRstCuisine
+        description: Search filter for Cuisine
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstRstWebSite
+        description: Search filter for Web site
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstRstAddress
+        description: Search filter for Address
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstRstCoordinates
+        description: Search filter for Coordinates
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstRstTimestamp
+        description: Search filter for Timestamp
+        required: false
+      - schema:
+          type: string
+          enum:
+          - CLOSED
+          - OPEN
+        in: query
+        name: rstRstStatus
+        description: Search filter for Status
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: rstRstNbComments
+        description: Search filter for Nb. of comments
+        required: false
+      - schema:
+          type: number
+        in: query
+        name: rstRstRating
+        description: Search filter for Rating
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstRstDescription
+        description: Search filter for Description
+        required: false
+      - schema:
+          type: object
+        in: query
+        name: rstRstPicture
+        description: Search filter for Picture
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstRstLocId
+        description: Search filter for Location
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstRstLocId__rstLocName
+        description: Search filter for Location name
+        required: false
+      - schema:
+          type: string
+          enum:
+          - AL
+          - AK
+          - AZ
+          - AR
+          - CA
+          - CO
+          - CT
+          - DE
+          - DC
+          - FL
+          - GA
+          - HI
+          - ID
+          - IL
+          - IN
+          - IA
+          - KS
+          - KY
+          - LA
+          - ME
+          - MD
+          - MA
+          - MI
+          - MN
+          - MS
+          - MO
+          - MT
+          - NE
+          - NV
+          - NH
+          - NJ
+          - NM
+          - NY
+          - NC
+          - ND
+          - OH
+          - OK
+          - OR
+          - PA
+          - RI
+          - SC
+          - SD
+          - TN
+          - TX
+          - UT
+          - VT
+          - VA
+          - WA
+          - WV
+          - WI
+          - WY
+        in: query
+        name: rstRstLocId__rstLocState
+        description: Search filter for Location State
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstRstLocId__rstLocCoordinates
+        description: Search filter for Location coordinates
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: rstRstLocId__rstLocExtent
+        description: Search filter for Location extent
+        required: false
+      tags:
+      - RstRestaurant
+  /logout:
+    get:
+      security:
+      - bearerAuth: []
+      description: Logout
+      operationId: logout
+      responses:
+        '200':
+          description: Logout confirmation
+          content:
+            application/json: {}
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      tags:
+      - Application
+  /rest:
+    get:
+      security:
+      - bearerAuth: []
+      description: Application session information
+      operationId: info
+      responses:
+        '200':
+          description: Application information
+          content:
+            application/json: {}
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+            text/plain: {}
+      parameters:
+      - schema:
+          type: boolean
+        in: query
+        name: texts
+        description: Texts?
+        required: false
+      tags:
+      - Application
+  /rest/RstRestaurant/{row_id}:
+    post:
+      security:
+      - bearerAuth: []
+      description: Create business object record
+      operationId: obj-rstrestaurant-create
+      responses:
+        '200':
+          description: Created business object record
+          content:
+            application/json: {}
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID
+        required: true
+      - schema:
+          type: string
+        in: query
+        name: rstRstName
+        description: Name
+        required: false
+      - schema:
+          type: string
+          enum:
+          - AL
+          - AK
+          - AZ
+          - AR
+          - CA
+          - CO
+          - CT
+          - DE
+          - DC
+          - FL
+          - GA
+          - HI
+          - ID
+          - IL
+          - IN
+          - IA
+          - KS
+          - KY
+          - LA
+          - ME
+          - MD
+          - MA
+          - MI
+          - MN
+          - MS
+          - MO
+          - MT
+          - NE
+          - NV
+          - NH
+          - NJ
+          - NM
+          - NY
+          - NC
+          - ND
+          - OH
+          - OK
+          - OR
+          - PA
+          - RI
+          - SC
+          - SD
+          - TN
+          - TX
+          - UT
+          - VT
+          - VA
+          - WA
+          - WV
+          - WI
+          - WY
+        in: query
+        name: rstRstState
+        description: State
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstRstCuisine
+        description: Cuisine
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstRstWebSite
+        description: Web site
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstRstAddress
+        description: Address
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstRstCoordinates
+        description: Coordinates
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstRstTimestamp
+        description: Timestamp
+        required: false
+      - schema:
+          type: string
+          enum:
+          - CLOSED
+          - OPEN
+        in: query
+        name: rstRstStatus
+        description: Status
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: rstRstNbComments
+        description: Nb. of comments
+        required: false
+      - schema:
+          type: number
+        in: query
+        name: rstRstRating
+        description: Rating
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstRstDescription
+        description: Description
+        required: false
+      - schema:
+          type: object
+        in: query
+        name: rstRstPicture
+        description: Picture
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstRstLocId
+        description: Location
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstRstLocId__rstLocName
+        description: Location name
+        required: false
+      - schema:
+          type: string
+          enum:
+          - AL
+          - AK
+          - AZ
+          - AR
+          - CA
+          - CO
+          - CT
+          - DE
+          - DC
+          - FL
+          - GA
+          - HI
+          - ID
+          - IL
+          - IN
+          - IA
+          - KS
+          - KY
+          - LA
+          - ME
+          - MD
+          - MA
+          - MI
+          - MN
+          - MS
+          - MO
+          - MT
+          - NE
+          - NV
+          - NH
+          - NJ
+          - NM
+          - NY
+          - NC
+          - ND
+          - OH
+          - OK
+          - OR
+          - PA
+          - RI
+          - SC
+          - SD
+          - TN
+          - TX
+          - UT
+          - VT
+          - VA
+          - WA
+          - WV
+          - WI
+          - WY
+        in: query
+        name: rstRstLocId__rstLocState
+        description: Location State
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstRstLocId__rstLocCoordinates
+        description: Location coordinates
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: rstRstLocId__rstLocExtent
+        description: Location extent
+        required: false
+      tags:
+      - RstRestaurant
+    get:
+      security:
+      - bearerAuth: []
+      description: Get business object record
+      operationId: obj-rstrestaurant-get
+      responses:
+        '200':
+          description: Business object record
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID
+        required: true
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_documents
+        description: Inline documents?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_objects
+        description: Inline objects?
+        required: false
+      tags:
+      - RstRestaurant
+    delete:
+      security:
+      - bearerAuth: []
+      description: Delete business object record
+      operationId: obj-rstrestaurant-delete
+      responses:
+        '200':
+          description: Business object deletion confirmation
+          content:
+            application/json: {}
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID
+        required: true
+      tags:
+      - RstRestaurant
+    put:
+      security:
+      - bearerAuth: []
+      description: Update business object record
+      operationId: obj-rstrestaurant-update
+      responses:
+        '200':
+          description: Updated business object record
+          content:
+            application/json: {}
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID
+        required: true
+      - schema:
+          type: string
+        in: query
+        name: rstRstName
+        description: Name
+        required: false
+      - schema:
+          type: string
+          enum:
+          - AL
+          - AK
+          - AZ
+          - AR
+          - CA
+          - CO
+          - CT
+          - DE
+          - DC
+          - FL
+          - GA
+          - HI
+          - ID
+          - IL
+          - IN
+          - IA
+          - KS
+          - KY
+          - LA
+          - ME
+          - MD
+          - MA
+          - MI
+          - MN
+          - MS
+          - MO
+          - MT
+          - NE
+          - NV
+          - NH
+          - NJ
+          - NM
+          - NY
+          - NC
+          - ND
+          - OH
+          - OK
+          - OR
+          - PA
+          - RI
+          - SC
+          - SD
+          - TN
+          - TX
+          - UT
+          - VT
+          - VA
+          - WA
+          - WV
+          - WI
+          - WY
+        in: query
+        name: rstRstState
+        description: State
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstRstCuisine
+        description: Cuisine
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstRstWebSite
+        description: Web site
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstRstAddress
+        description: Address
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstRstCoordinates
+        description: Coordinates
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstRstTimestamp
+        description: Timestamp
+        required: false
+      - schema:
+          type: string
+          enum:
+          - CLOSED
+          - OPEN
+        in: query
+        name: rstRstStatus
+        description: Status
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: rstRstNbComments
+        description: Nb. of comments
+        required: false
+      - schema:
+          type: number
+        in: query
+        name: rstRstRating
+        description: Rating
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstRstDescription
+        description: Description
+        required: false
+      - schema:
+          type: object
+        in: query
+        name: rstRstPicture
+        description: Picture
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstRstLocId
+        description: Location
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstRstLocId__rstLocName
+        description: Location name
+        required: false
+      - schema:
+          type: string
+          enum:
+          - AL
+          - AK
+          - AZ
+          - AR
+          - CA
+          - CO
+          - CT
+          - DE
+          - DC
+          - FL
+          - GA
+          - HI
+          - ID
+          - IL
+          - IN
+          - IA
+          - KS
+          - KY
+          - LA
+          - ME
+          - MD
+          - MA
+          - MI
+          - MN
+          - MS
+          - MO
+          - MT
+          - NE
+          - NV
+          - NH
+          - NJ
+          - NM
+          - NY
+          - NC
+          - ND
+          - OH
+          - OK
+          - OR
+          - PA
+          - RI
+          - SC
+          - SD
+          - TN
+          - TX
+          - UT
+          - VT
+          - VA
+          - WA
+          - WV
+          - WI
+          - WY
+        in: query
+        name: rstRstLocId__rstLocState
+        description: Location State
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstRstLocId__rstLocCoordinates
+        description: Location coordinates
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: rstRstLocId__rstLocExtent
+        description: Location extent
+        required: false
+      tags:
+      - RstRestaurant
+  /rest/RstComments:
+    get:
+      security:
+      - bearerAuth: []
+      description: Get business object metadata or search records
+      operationId: obj-rstcomments-search
+      responses:
+        '200':
+          description: Business object metadata or records of search result
+          content:
+            application/json: {}
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      parameters:
+      - schema:
+          type: boolean
+        in: query
+        name: _metadata
+        description: Metadata?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _doc
+        description: Documentation?
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstCmtDateTime
+        description: Search filter for Date time
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstCmtEmail
+        description: Search filter for Email
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstCmtRstId
+        description: Search filter for Restaurant
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstCmtRstId__rstRstName
+        description: Search filter for Restaurant name
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstCmtRstId__rstRstAddress
+        description: Search filter for Address
+        required: false
+      - schema:
+          type: string
+          enum:
+          - AL
+          - AK
+          - AZ
+          - AR
+          - CA
+          - CO
+          - CT
+          - DE
+          - DC
+          - FL
+          - GA
+          - HI
+          - ID
+          - IL
+          - IN
+          - IA
+          - KS
+          - KY
+          - LA
+          - ME
+          - MD
+          - MA
+          - MI
+          - MN
+          - MS
+          - MO
+          - MT
+          - NE
+          - NV
+          - NH
+          - NJ
+          - NM
+          - NY
+          - NC
+          - ND
+          - OH
+          - OK
+          - OR
+          - PA
+          - RI
+          - SC
+          - SD
+          - TN
+          - TX
+          - UT
+          - VT
+          - VA
+          - WA
+          - WV
+          - WI
+          - WY
+        in: query
+        name: rstCmtRstId__rstRstState
+        description: Search filter for State
+        required: false
+      - schema:
+          type: string
+          enum:
+          - '100'
+          - '75'
+          - '50'
+          - '25'
+          - '0'
+        in: query
+        name: rstCmtEval
+        description: Search filter for Evaluation
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: rstCmtSentiment
+        description: Search filter for Sentiment
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstCmtComments
+        description: Search filter for Comments
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstCmtCommentsInEnglish
+        description: Search filter for Comments (translated)
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: rstCmtTones
+        description: Search filter for Tones
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: rstCmtVisible
+        description: Search filter for Visible ?
+        required: false
+      tags:
+      - RstComments
+info:
+  license:
+    name: Simplicite license
+    url: http://www.simplicitesoftware.com
+  contact:
+    name: Simplicite Software
+    url: http://www.simplicitesoftware.com
+    email: contact@simplicitesoftware.com
+  description: REST APIs for RestaurantsDemo
+  title: RestaurantsDemo
+  version: '3.1'

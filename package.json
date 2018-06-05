@@ -1,0 +1,12 @@
+{
+    "date": "Tue Feb 13 21:07:51 CET 2018",
+    "name": "RestaurantsDemo",
+    "format": "xml",
+    "description": "This module is a demo inspired from a famous travelers\nadvisor web sites.\n\nIt is the backend to a NodeRED&reg; frontend web application.",
+    "repository": {
+        "type": "url",
+        "url": "https://www.simplicite.io/resources/modules/restaurantsdemo-app-3.1.xml"
+    },
+    "version": "3.1",
+    "dependencies": [{"Simplicite": "4.0"}]
+}
