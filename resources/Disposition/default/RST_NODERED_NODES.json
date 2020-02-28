@@ -523,7 +523,7 @@
         "type": "function",
         "z": "1452011e.3101ef",
         "name": "addapikey",
-        "func": "console.log(msg);\nmsg.payload.googleapikey =  env.get(\"GOOGLE_API_KEY\");\nreturn msg;",
+        "func": "msg.payload.googleapikey =  env.get(\"GOOGLE_API_KEY\");\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 810,
