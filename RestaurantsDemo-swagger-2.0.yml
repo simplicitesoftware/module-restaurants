@@ -622,8 +622,8 @@ paths:
         type: string
         required: false
         enum:
-        - OPEN
         - CLOSED
+        - OPEN
       - in: query
         name: rstRstNbComments
         description: Search filter for Number of comments
@@ -1130,8 +1130,8 @@ definitions:
         description: Status
         type: string
         enum:
-        - OPEN
         - CLOSED
+        - OPEN
       rstRstWebSite:
         description: Web site
         type: string

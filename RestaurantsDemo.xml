@@ -26,18 +26,18 @@ The nodes of the frontend are stored in the `RST_NODERED_NODES` resource.]]></md
 	<name>Theme</name>
 	<action>upsert</action>
 	<data>
-		<thm_name>RstTheme</thm_name>
-		<thm_logo_id/>
+		<thm_name>restaurants</thm_name>
+		<thm_logo_id>files/Theme/restaurants/logo.png</thm_logo_id>
 		<thm_logo_invert>0</thm_logo_invert>
-		<thm_logo2_id>files/Theme/RstTheme/logo2.png</thm_logo2_id>
-		<thm_favicon_id/>
+		<thm_logo2_id>files/Theme/restaurants/logo2.png</thm_logo2_id>
+		<thm_favicon_id>files/Theme/restaurants/favicon.png</thm_favicon_id>
 		<thm_color1/>
 		<thm_color2/>
 		<thm_text2/>
 		<thm_color3/>
 		<thm_text3/>
 		<thm_base>light</thm_base>
-		<thm_css_doc>files/Theme/RstTheme/RstTheme_gen.css</thm_css_doc>
+		<thm_css_doc>files/Theme/restaurants/restaurants_gen.css</thm_css_doc>
 		<thm_addon/>
 		<thm_searchbox/>
 		<thm_active/>
@@ -67,7 +67,7 @@ The nodes of the frontend are stored in the `RST_NODERED_NODES` resource.]]></md
 		<viw_disp_id.dis_code/>
 		<viw_scope/>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
-		<viw_theme_id.thm_name>RstTheme</viw_theme_id.thm_name>
+		<viw_theme_id.thm_name>restaurants</viw_theme_id.thm_name>
 	</data>
 </object>
 <object>
@@ -2554,19 +2554,36 @@ The nodes of the frontend are stored in the `RST_NODERED_NODES` resource.]]></md
 	<name>Template</name>
 	<action>upsert</action>
 	<data>
+		<tpl_name>RstComments</tpl_name>
+		<tpl_ui><![CDATA[<div class="area" data-area="1"></div>
+]]></tpl_ui>
+		<tpl_min/>
+		<tpl_image/>
+		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tpl_name>RstLocation</tpl_name>
+		<tpl_ui><![CDATA[<div class="area" data-area="1"></div>
+]]></tpl_ui>
+		<tpl_min/>
+		<tpl_image/>
+		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
+	</data>
+	<data>
 		<tpl_name>RstRestaurant</tpl_name>
-		<tpl_ui><![CDATA[<table class="area">
-	<tr>
-		<td class="area" rowspan="2">[AREA:1:=]</td>
-		<td class="area">[AREA:2:=]</td>
-	</tr>
-	<tr>
-		<td class="area">[AREA:4:=]</td>
-	</tr>
-	<tr>
-		<td class="area" colspan="2">[AREA:3]</td>
-	</tr>
-</table>]]></tpl_ui>
+		<tpl_ui><![CDATA[<div>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="area" data-area="1"></div>
+    </div>
+    <div class="col-sm-6">
+      <div class="area" data-area="2"></div>
+      <div class="area" data-area="4"></div>
+    </div>
+  </div>
+  <div class="area" data-area="3"></div>
+</div>
+]]></tpl_ui>
 		<tpl_min/>
 		<tpl_image/>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -2576,34 +2593,148 @@ The nodes of the frontend are stored in the `RST_NODERED_NODES` resource.]]></md
 	<name>ObjectFieldArea</name>
 	<action>upsert</action>
 	<data>
-		<ofa_name>RstRestaurant1</ofa_name>
+		<ofa_name>RstComments-1</ofa_name>
+		<ofa_position>1</ofa_position>
+		<ofa_title>0</ofa_title>
+		<ofa_ui><![CDATA[<div>
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="field" data-field="rstCmtDateTime"></div>
+    </div>
+    <div class="col-sm-7">
+      <div class="field" data-field="rstCmtEmail"></div>
+    </div>
+  </div>
+  <div class="field" data-field="rstCmtRstId"></div>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="field" data-field="rstCmtRstId__rstRstName"></div>
+      <div class="field" data-field="rstCmtRstId__rstRstAddress"></div>
+      <div class="field" data-field="rstCmtRstId__rstRstState"></div>
+      <div class="field" data-field="rstCmtEval"></div>
+      <div class="field" data-field="rstCmtVisible"></div>
+    </div>
+    <div class="col-sm-6">
+      <div class="field" data-field="rstCmtSentiment"></div>
+      <div class="field" data-field="rstCmtComments"></div>
+      <div class="field" data-field="rstCmtCommentsInEnglish"></div>
+      <div class="field" data-field="rstCmtTones"></div>
+    </div>
+  </div>
+</div>
+]]></ofa_ui>
+		<ofa_icon/>
+		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
+	</data>
+	<data>
+		<ofa_name>RstLocation-1</ofa_name>
+		<ofa_position>1</ofa_position>
+		<ofa_title>0</ofa_title>
+		<ofa_ui><![CDATA[<div>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="field" data-field="rstLocName"></div>
+    </div>
+    <div class="col-sm-6">
+      <div class="field" data-field="rstLocState"></div>
+    </div>
+  </div>
+  <div class="field" data-field="rstLocDescription"></div>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="field" data-field="rstLocCoordinates"></div>
+    </div>
+    <div class="col-sm-6">
+      <div class="field" data-field="rstLocExtent"></div>
+    </div>
+  </div>
+</div>
+]]></ofa_ui>
+		<ofa_icon/>
+		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
+	</data>
+	<data>
+		<ofa_name>RstRestaurant-1</ofa_name>
 		<ofa_position>1</ofa_position>
 		<ofa_title>1</ofa_title>
-		<ofa_ui/>
+		<ofa_ui><![CDATA[<div>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="field" data-field="rstRstName"></div>
+      <div class="field" data-field="rstRstCuisine"></div>
+    </div>
+    <div class="col-sm-6">
+      <div class="field" data-field="rstRstState"></div>
+      <div class="field" data-field="rstRstWebSite"></div>
+    </div>
+  </div>
+  <div class="field" data-field="rstRstAddress"></div>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="field" data-field="rstRstCoordinates"></div>
+    </div>
+    <div class="col-sm-6">
+      <div class="field" data-field="rstRstTimestamp"></div>
+    </div>
+  </div>
+</div>
+]]></ofa_ui>
 		<ofa_icon/>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
 	<data>
-		<ofa_name>RstRestaurant2</ofa_name>
+		<ofa_name>RstRestaurant-2</ofa_name>
 		<ofa_position>2</ofa_position>
 		<ofa_title>1</ofa_title>
-		<ofa_ui/>
+		<ofa_ui><![CDATA[<div>
+  <div class="field" data-field="rstRstStatus"></div>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="field" data-field="rstRstNbComments"></div>
+    </div>
+    <div class="col-sm-6">
+      <div class="field" data-field="rstRstRating"></div>
+    </div>
+  </div>
+</div>
+]]></ofa_ui>
 		<ofa_icon/>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
 	<data>
-		<ofa_name>RstRestaurant3</ofa_name>
+		<ofa_name>RstRestaurant-3</ofa_name>
 		<ofa_position>3</ofa_position>
 		<ofa_title>1</ofa_title>
-		<ofa_ui/>
+		<ofa_ui><![CDATA[<div class="row">
+  <div class="col-sm-8">
+    <div class="field" data-field="rstRstDescription"></div>
+  </div>
+  <div class="col-sm-4">
+    <div class="field" data-field="rstRstPicture"></div>
+  </div>
+</div>
+]]></ofa_ui>
 		<ofa_icon/>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
 	<data>
-		<ofa_name>RstRestaurant4</ofa_name>
+		<ofa_name>RstRestaurant-4</ofa_name>
 		<ofa_position>4</ofa_position>
 		<ofa_title>1</ofa_title>
-		<ofa_ui/>
+		<ofa_ui><![CDATA[<div>
+  <div class="field" data-field="rstRstLocId"></div>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="field" data-field="rstRstLocId__rstLocName"></div>
+      <div class="field" data-field="rstRstLocId__rstLocCoordinates"></div>
+    </div>
+    <div class="col-sm-6">
+      <div class="field" data-field="rstRstLocId__rstLocState"></div>
+      <div class="field" data-field="rstRstLocId__rstLocExtent"></div>
+    </div>
+  </div>
+</div>
+]]></ofa_ui>
 		<ofa_icon/>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
@@ -2616,7 +2747,7 @@ The nodes of the frontend are stored in the `RST_NODERED_NODES` resource.]]></md
 		<obd_comment/>
 		<obd_type>D</obd_type>
 		<obd_view_id.viw_name>RstHome</obd_view_id.viw_name>
-		<obd_nohome>0</obd_nohome>
+		<obd_nohome>1</obd_nohome>
 		<obd_icon>restaurant</obd_icon>
 		<obd_order>71500</obd_order>
 		<obd_domain_id.obd_name/>
@@ -2645,7 +2776,7 @@ The nodes of the frontend are stored in the `RST_NODERED_NODES` resource.]]></md
 		<obo_indexable>0</obo_indexable>
 		<obo_groupby>0</obo_groupby>
 		<obo_dfltref/>
-		<obo_template_id.tpl_name>Base</obo_template_id.tpl_name>
+		<obo_template_id.tpl_name>RstComments</obo_template_id.tpl_name>
 		<obo_cache>D</obo_cache>
 		<obo_copy>1</obo_copy>
 		<obo_export>1</obo_export>
@@ -2707,7 +2838,7 @@ The nodes of the frontend are stored in the `RST_NODERED_NODES` resource.]]></md
 		<obo_indexable>0</obo_indexable>
 		<obo_groupby>0</obo_groupby>
 		<obo_dfltref>RstRestaurant;rstRstLocId</obo_dfltref>
-		<obo_template_id.tpl_name>Base</obo_template_id.tpl_name>
+		<obo_template_id.tpl_name>RstLocation</obo_template_id.tpl_name>
 		<obo_cache>D</obo_cache>
 		<obo_copy>0</obo_copy>
 		<obo_export>1</obo_export>
@@ -2845,8 +2976,8 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault><![CDATA[[DATETIME]]]></obf_field_id.fld_dfault>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
+		<obf_area_id.ofa_name>RstComments-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -2874,8 +3005,8 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
+		<obf_area_id.ofa_name>RstComments-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -2903,8 +3034,8 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
+		<obf_area_id.ofa_name>RstComments-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -2932,8 +3063,8 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
+		<obf_area_id.ofa_name>RstComments-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -2961,8 +3092,8 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
+		<obf_area_id.ofa_name>RstComments-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -2990,8 +3121,8 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
+		<obf_area_id.ofa_name>RstComments-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -3019,8 +3150,8 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
+		<obf_area_id.ofa_name>RstComments-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -3048,8 +3179,8 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
+		<obf_area_id.ofa_name>RstComments-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -3077,8 +3208,8 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
+		<obf_area_id.ofa_name>RstComments-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -3106,8 +3237,8 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
+		<obf_area_id.ofa_name>RstComments-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -3135,8 +3266,8 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
+		<obf_area_id.ofa_name>RstComments-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -3164,8 +3295,8 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault><![CDATA[1]]></obf_field_id.fld_dfault>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
+		<obf_area_id.ofa_name>RstComments-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -3193,8 +3324,8 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
+		<obf_area_id.ofa_name>RstLocation-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -3222,8 +3353,8 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
+		<obf_area_id.ofa_name>RstLocation-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -3251,8 +3382,8 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
+		<obf_area_id.ofa_name>RstLocation-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -3280,8 +3411,8 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
+		<obf_area_id.ofa_name>RstLocation-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -3309,8 +3440,8 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault><![CDATA[1]]></obf_field_id.fld_dfault>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
+		<obf_area_id.ofa_name>RstLocation-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -3338,7 +3469,7 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name>RstRestaurant1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_name>RstRestaurant-1</obf_area_id.ofa_name>
 		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
@@ -3367,7 +3498,7 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name>RstRestaurant1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_name>RstRestaurant-1</obf_area_id.ofa_name>
 		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
@@ -3396,7 +3527,7 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name>RstRestaurant1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_name>RstRestaurant-1</obf_area_id.ofa_name>
 		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
@@ -3425,7 +3556,7 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name>RstRestaurant1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_name>RstRestaurant-1</obf_area_id.ofa_name>
 		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
@@ -3454,7 +3585,7 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name>RstRestaurant1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_name>RstRestaurant-1</obf_area_id.ofa_name>
 		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
@@ -3483,7 +3614,7 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name>RstRestaurant1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_name>RstRestaurant-1</obf_area_id.ofa_name>
 		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
@@ -3512,7 +3643,7 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name>RstRestaurant1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_name>RstRestaurant-1</obf_area_id.ofa_name>
 		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
@@ -3541,7 +3672,7 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault><![CDATA[OPEN]]></obf_field_id.fld_dfault>
-		<obf_area_id.ofa_name>RstRestaurant2</obf_area_id.ofa_name>
+		<obf_area_id.ofa_name>RstRestaurant-2</obf_area_id.ofa_name>
 		<obf_area_id.ofa_position>2</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
@@ -3570,7 +3701,7 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault><![CDATA[0]]></obf_field_id.fld_dfault>
-		<obf_area_id.ofa_name>RstRestaurant2</obf_area_id.ofa_name>
+		<obf_area_id.ofa_name>RstRestaurant-2</obf_area_id.ofa_name>
 		<obf_area_id.ofa_position>2</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
@@ -3599,7 +3730,7 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault><![CDATA[0]]></obf_field_id.fld_dfault>
-		<obf_area_id.ofa_name>RstRestaurant2</obf_area_id.ofa_name>
+		<obf_area_id.ofa_name>RstRestaurant-2</obf_area_id.ofa_name>
 		<obf_area_id.ofa_position>2</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
@@ -3628,7 +3759,7 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name>RstRestaurant3</obf_area_id.ofa_name>
+		<obf_area_id.ofa_name>RstRestaurant-3</obf_area_id.ofa_name>
 		<obf_area_id.ofa_position>3</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
@@ -3657,7 +3788,7 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name>RstRestaurant3</obf_area_id.ofa_name>
+		<obf_area_id.ofa_name>RstRestaurant-3</obf_area_id.ofa_name>
 		<obf_area_id.ofa_position>3</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
@@ -3686,7 +3817,7 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name>RstRestaurant4</obf_area_id.ofa_name>
+		<obf_area_id.ofa_name>RstRestaurant-4</obf_area_id.ofa_name>
 		<obf_area_id.ofa_position>4</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
@@ -3715,7 +3846,7 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name>RstRestaurant4</obf_area_id.ofa_name>
+		<obf_area_id.ofa_name>RstRestaurant-4</obf_area_id.ofa_name>
 		<obf_area_id.ofa_position>4</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
@@ -3744,7 +3875,7 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name>RstRestaurant4</obf_area_id.ofa_name>
+		<obf_area_id.ofa_name>RstRestaurant-4</obf_area_id.ofa_name>
 		<obf_area_id.ofa_position>4</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
@@ -3773,7 +3904,7 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name>RstRestaurant4</obf_area_id.ofa_name>
+		<obf_area_id.ofa_name>RstRestaurant-4</obf_area_id.ofa_name>
 		<obf_area_id.ofa_position>4</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
@@ -3802,7 +3933,7 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault><![CDATA[1]]></obf_field_id.fld_dfault>
-		<obf_area_id.ofa_name>RstRestaurant4</obf_area_id.ofa_name>
+		<obf_area_id.ofa_name>RstRestaurant-4</obf_area_id.ofa_name>
 		<obf_area_id.ofa_position>4</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
@@ -3830,7 +3961,7 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<obf_inline>0</obf_inline>
 		<obf_rendering/>
 		<obf_treedepth/>
-		<obf_area_id.ofa_name>RstRestaurant4</obf_area_id.ofa_name>
+		<obf_area_id.ofa_name>RstRestaurant-4</obf_area_id.ofa_name>
 		<obf_area_id.ofa_position>4</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
@@ -3854,8 +3985,8 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<obf_inline>0</obf_inline>
 		<obf_rendering/>
 		<obf_treedepth/>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
+		<obf_area_id.ofa_name>RstComments-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
 </object>
@@ -4272,6 +4403,42 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		</res_object>
 		<res_type>IMG</res_type>
 		<res_lang>ANY</res_lang>
+		<res_code>restaurants-module</res_code>
+		<res_cached>0</res_cached>
+		<res_file/>
+		<res_file_compiled/>
+		<res_image>resources/Disposition/default/restaurants-module.png</res_image>
+		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
+	</data>
+	<data>
+		<res_object>
+			<object>
+				<name>Disposition</name>
+				<data>
+					<dis_code>default</dis_code>
+				</data>
+			</object>
+		</res_object>
+		<res_type>IMG</res_type>
+		<res_lang>ANY</res_lang>
+		<res_code>restaurants-module-full</res_code>
+		<res_cached>0</res_cached>
+		<res_file/>
+		<res_file_compiled/>
+		<res_image>resources/Disposition/default/restaurants-module-full.png</res_image>
+		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
+	</data>
+	<data>
+		<res_object>
+			<object>
+				<name>Disposition</name>
+				<data>
+					<dis_code>default</dis_code>
+				</data>
+			</object>
+		</res_object>
+		<res_type>IMG</res_type>
+		<res_lang>ANY</res_lang>
 		<res_code>RST_FRONTLOGO</res_code>
 		<res_cached>0</res_cached>
 		<res_file/>
@@ -4290,11 +4457,11 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		</res_object>
 		<res_type>IMG</res_type>
 		<res_lang>ANY</res_lang>
-		<res_code>RST_HOMEPAGE</res_code>
+		<res_code>RST_LOGO</res_code>
 		<res_cached>1</res_cached>
 		<res_file/>
 		<res_file_compiled/>
-		<res_image>resources/Disposition/default/RST_HOMEPAGE.png</res_image>
+		<res_image>resources/Disposition/default/RST_LOGO.png</res_image>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -5075,56 +5242,84 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 	<action>upsert</action>
 	<data>
 		<tsl_typeFieldArea>Z</tsl_typeFieldArea>
-		<tsl_id.ofa_name>RstRestaurant1</tsl_id.ofa_name>
+		<tsl_id.ofa_name>RstComments-1</tsl_id.ofa_name>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>Comments</tsl_value>
+		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_typeFieldArea>Z</tsl_typeFieldArea>
+		<tsl_id.ofa_name>RstLocation-1</tsl_id.ofa_name>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>Location</tsl_value>
+		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_typeFieldArea>Z</tsl_typeFieldArea>
+		<tsl_id.ofa_name>RstRestaurant-1</tsl_id.ofa_name>
 		<tsl_lang>ENU</tsl_lang>
 		<tsl_value>Identification</tsl_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
 	<data>
 		<tsl_typeFieldArea>Z</tsl_typeFieldArea>
-		<tsl_id.ofa_name>RstRestaurant2</tsl_id.ofa_name>
+		<tsl_id.ofa_name>RstRestaurant-2</tsl_id.ofa_name>
 		<tsl_lang>ENU</tsl_lang>
 		<tsl_value>Status</tsl_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
 	<data>
 		<tsl_typeFieldArea>Z</tsl_typeFieldArea>
-		<tsl_id.ofa_name>RstRestaurant3</tsl_id.ofa_name>
+		<tsl_id.ofa_name>RstRestaurant-3</tsl_id.ofa_name>
 		<tsl_lang>ENU</tsl_lang>
 		<tsl_value>Details</tsl_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
 	<data>
 		<tsl_typeFieldArea>Z</tsl_typeFieldArea>
-		<tsl_id.ofa_name>RstRestaurant4</tsl_id.ofa_name>
+		<tsl_id.ofa_name>RstRestaurant-4</tsl_id.ofa_name>
 		<tsl_lang>ENU</tsl_lang>
 		<tsl_value>Attached location</tsl_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
 	<data>
 		<tsl_typeFieldArea>Z</tsl_typeFieldArea>
-		<tsl_id.ofa_name>RstRestaurant1</tsl_id.ofa_name>
+		<tsl_id.ofa_name>RstComments-1</tsl_id.ofa_name>
+		<tsl_lang>FRA</tsl_lang>
+		<tsl_value>Commentaires</tsl_value>
+		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_typeFieldArea>Z</tsl_typeFieldArea>
+		<tsl_id.ofa_name>RstLocation-1</tsl_id.ofa_name>
+		<tsl_lang>FRA</tsl_lang>
+		<tsl_value>Lieu</tsl_value>
+		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_typeFieldArea>Z</tsl_typeFieldArea>
+		<tsl_id.ofa_name>RstRestaurant-1</tsl_id.ofa_name>
 		<tsl_lang>FRA</tsl_lang>
 		<tsl_value>Identification</tsl_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
 	<data>
 		<tsl_typeFieldArea>Z</tsl_typeFieldArea>
-		<tsl_id.ofa_name>RstRestaurant2</tsl_id.ofa_name>
+		<tsl_id.ofa_name>RstRestaurant-2</tsl_id.ofa_name>
 		<tsl_lang>FRA</tsl_lang>
 		<tsl_value>Etat</tsl_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
 	<data>
 		<tsl_typeFieldArea>Z</tsl_typeFieldArea>
-		<tsl_id.ofa_name>RstRestaurant3</tsl_id.ofa_name>
+		<tsl_id.ofa_name>RstRestaurant-3</tsl_id.ofa_name>
 		<tsl_lang>FRA</tsl_lang>
 		<tsl_value>Détails</tsl_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
 	<data>
 		<tsl_typeFieldArea>Z</tsl_typeFieldArea>
-		<tsl_id.ofa_name>RstRestaurant4</tsl_id.ofa_name>
+		<tsl_id.ofa_name>RstRestaurant-4</tsl_id.ofa_name>
 		<tsl_lang>FRA</tsl_lang>
 		<tsl_value>Lieu associé</tsl_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -5165,7 +5360,7 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<tsl_typeObject>O</tsl_typeObject>
 		<tsl_id.obo_name>RstLocation</tsl_id.obo_name>
 		<tsl_lang>ENU</tsl_lang>
-		<tsl_value>Location</tsl_value>
+		<tsl_value>Location|Locations</tsl_value>
 		<tsl_help/>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
@@ -5173,7 +5368,7 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<tsl_typeObject>O</tsl_typeObject>
 		<tsl_id.obo_name>RstRestaurant</tsl_id.obo_name>
 		<tsl_lang>ENU</tsl_lang>
-		<tsl_value>Restaurant</tsl_value>
+		<tsl_value>Restaurant|Restaurants</tsl_value>
 		<tsl_help/>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
@@ -5181,7 +5376,7 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<tsl_typeObject>O</tsl_typeObject>
 		<tsl_id.obo_name>RstComments</tsl_id.obo_name>
 		<tsl_lang>FRA</tsl_lang>
-		<tsl_value>Commentaires</tsl_value>
+		<tsl_value>Commentaire|Commentaires</tsl_value>
 		<tsl_help/>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
@@ -5189,7 +5384,7 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<tsl_typeObject>O</tsl_typeObject>
 		<tsl_id.obo_name>RstLocation</tsl_id.obo_name>
 		<tsl_lang>FRA</tsl_lang>
-		<tsl_value>Lieu</tsl_value>
+		<tsl_value>Lieu|Lieux</tsl_value>
 		<tsl_help/>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
@@ -5197,7 +5392,7 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<tsl_typeObject>O</tsl_typeObject>
 		<tsl_id.obo_name>RstRestaurant</tsl_id.obo_name>
 		<tsl_lang>FRA</tsl_lang>
-		<tsl_value>Restaurant</tsl_value>
+		<tsl_value>Restaurant|Restaurants</tsl_value>
 		<tsl_help/>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
