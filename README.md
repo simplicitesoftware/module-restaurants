@@ -14,7 +14,7 @@
 This module is a very simple restaurant rating application demo
 inspired by a famous travelers' advisor service.
 
-It is the business backend to a NodeRED&reg; frontend web application.
+It is the business backend to a [NodeRED&reg;](https://nodered.org) frontend web application.
 
 The nodes of the frontend are stored in the `RST_NODERED_NODES` resource.
 
