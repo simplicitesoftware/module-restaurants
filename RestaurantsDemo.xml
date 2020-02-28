@@ -1403,7 +1403,7 @@ The nodes of the frontend are stored in the `RST_NODERED_NODES` resource.]]></md
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray/>
+		<fld_tray>0</fld_tray>
 		<fld_type>13</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist/>
@@ -1423,7 +1423,7 @@ The nodes of the frontend are stored in the `RST_NODERED_NODES` resource.]]></md
 		<fld_rendering/>
 		<fld_calc/>
 		<fld_objlist/>
-		<fld_comment><![CDATA[Free text comments]]></fld_comment>
+		<fld_comment><![CDATA[Free text comments in **native** language]]></fld_comment>
 		<fld_classification/>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
@@ -1440,7 +1440,7 @@ The nodes of the frontend are stored in the `RST_NODERED_NODES` resource.]]></md
 		<fld_more>1</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray/>
+		<fld_tray>0</fld_tray>
 		<fld_type>13</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist/>
@@ -1460,7 +1460,7 @@ The nodes of the frontend are stored in the `RST_NODERED_NODES` resource.]]></md
 		<fld_rendering/>
 		<fld_calc/>
 		<fld_objlist/>
-		<fld_comment><![CDATA[Free text coomments translated in english]]></fld_comment>
+		<fld_comment><![CDATA[Free text comments translated in **english**]]></fld_comment>
 		<fld_classification/>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>

@@ -38,8 +38,8 @@ Customer comments on a restaurant. Includes:
 | _Ref. `rstCmtRstId.rstRstState`_                             | _enum(2) using `RST_STATES` list_        |          |           |          | _State (e.g. `NY`)_                                                              |
 | `rstCmtEval`                                                 | enum(3) using `RST_EVAL` list            | yes      | yes       |          | Evaluation                                                                       |
 | `rstCmtSentiment`                                            | int(2)                                   |          | yes       |          | Sentiment score                                                                  |
-| `rstCmtComments`                                             | text(4000)                               |          | yes       |          | Free text comments                                                               |
-| `rstCmtCommentsInEnglish`                                    | text(4000)                               |          |           |          | Free text coomments translated in english                                        |
+| `rstCmtComments`                                             | text(4000)                               |          | yes       |          | Free text comments in **native** language                                        |
+| `rstCmtCommentsInEnglish`                                    | text(4000)                               |          |           |          | Free text comments translated in **english**                                     |
 | `rstCmtTones`                                                | text(4000)                               |          | yes       |          | Watson tones                                                                     |
 | `rstCmtVisible`                                              | boolean                                  |          | yes       |          | Visible?                                                                         |
 

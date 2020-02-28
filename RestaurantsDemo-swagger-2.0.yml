@@ -1052,12 +1052,12 @@ paths:
         required: false
       - in: query
         name: rstCmtComments
-        description: Search filter for Free text comments
+        description: Search filter for Free text comments in **native** language
         type: string
         required: false
       - in: query
         name: rstCmtCommentsInEnglish
-        description: Search filter for Free text coomments translated in english
+        description: Search filter for Free text comments translated in **english**
         type: string
         required: false
       - in: query
@@ -1464,10 +1464,10 @@ definitions:
         - '25'
         - '0'
       rstCmtCommentsInEnglish:
-        description: Free text coomments translated in english
+        description: Free text comments translated in **english**
         type: string
       rstCmtComments:
-        description: Free text comments
+        description: Free text comments in **native** language
         type: string
       rstCmtTones:
         description: Watson tones
