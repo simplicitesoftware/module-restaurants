@@ -11,12 +11,68 @@
 `RestaurantsDemo` module definition
 ===================================
 
+### Introduction
+
 This module is a very simple restaurant rating application demo
 inspired by a famous travelers' advisor service.
 
-It is the business backend to a [NodeRED&reg;](https://nodered.org) frontend web application.
+The frontend is a [NodeRED&reg;](https://nodered.org) web application.
 
-The nodes of the frontend are stored in the `RST_NODERED_NODES` resource.
+### Import
+
+To import this module:
+
+- Create a module named `RestaurantsDemo`
+- Set the settings as:
+
+```json
+{
+	"type": "git",
+	"origin": {
+		"uri": "https://github.com/simplicitesoftware/module-restaurants.git"
+	}
+}
+```
+
+- Click on the _Import module_ button
+
+### Configure backend
+
+In order to have the frontend working the password for the
+webservices-only user `rstfrontend` must be `simplicite`.
+
+This can be achieved by importing the following XML:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<simplicite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.simplicite.fr/base" xsi:schemaLocation="http://www.simplicite.fr/base https://www.simplicite.io/resources/schemas/base.xsd">
+<object>
+	<name>UserPwd</name>
+	<action>update</action>
+	<data>
+		<usr_login_read>rstfrontend</usr_login_read>
+		<usr_password>simplicite</usr_password>
+	</data>
+</object>
+</simplicite>
+```
+
+### Load dataConfigure frontend
+
+Install [NodeRED&reg;](https://nodered.org).
+
+Start it with your Google API key set as a environment variable: `GOOGLE_API_KEY=_myapikey_ node-red`
+
+In the NodeRED flow editor add the following nodes to the nodes palette (in the main menu choose the _Manage palette_ option):
+
+- Simplicité nodes: `node-red-contrib-simplicite`
+- Sentiment analysis nodes: `node-red-node-sentiment`
+- Watson nodes: `node-red-node-watson`
+
+Import the flows available in the `RST_NODERED_NODES` resource of the module.
+
+Configure the config node with your instance settings.
+
 
 `RstComments` business object definition
 ----------------------------------------

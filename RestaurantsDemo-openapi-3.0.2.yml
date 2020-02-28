@@ -38,8 +38,8 @@ components:
           description: Status
           type: string
           enum:
-          - CLOSED
           - OPEN
+          - CLOSED
         rstRstWebSite:
           description: Web site
           type: string
@@ -1147,8 +1147,8 @@ paths:
       - schema:
           type: string
           enum:
-          - CLOSED
           - OPEN
+          - CLOSED
         in: query
         name: rstRstStatus
         description: Search filter for Status

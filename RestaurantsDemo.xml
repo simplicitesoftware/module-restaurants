@@ -13,13 +13,69 @@
 		"uri": "https://github.com/simplicitesoftware/module-restaurants.git"
 	}
 }]]></mdl_url>
-		<mdl_lastupd>2020-02-28 14:55:58</mdl_lastupd>
-		<mdl_comment><![CDATA[This module is a very simple restaurant rating application demo
+		<mdl_lastupd>2020-02-28 20:20:46</mdl_lastupd>
+		<mdl_comment><![CDATA[### Introduction
+
+This module is a very simple restaurant rating application demo
 inspired by a famous travelers' advisor service.
 
-It is the business backend to a [NodeRED&reg;](https://nodered.org) frontend web application.
+The frontend is a [NodeRED&reg;](https://nodered.org) web application.
 
-The nodes of the frontend are stored in the `RST_NODERED_NODES` resource.]]></mdl_comment>
+### Import
+
+To import this module:
+
+- Create a module named `RestaurantsDemo`
+- Set the settings as:
+
+```json
+{
+	"type": "git",
+	"origin": {
+		"uri": "https://github.com/simplicitesoftware/module-restaurants.git"
+	}
+}
+```
+
+- Click on the _Import module_ button
+
+### Configure backend
+
+In order to have the frontend working the password for the
+webservices-only user `rstfrontend` must be `simplicite`.
+
+This can be achieved by importing the following XML:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<simplicite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.simplicite.fr/base" xsi:schemaLocation="http://www.simplicite.fr/base https://www.simplicite.io/resources/schemas/base.xsd">
+<object>
+	<name>UserPwd</name>
+	<action>update</action>
+	<data>
+		<usr_login_read>rstfrontend</usr_login_read>
+		<usr_password>simplicite</usr_password>
+	</data>
+</object>
+</simplicite>
+```
+
+### Load dataConfigure frontend
+
+Install [NodeRED&reg;](https://nodered.org).
+
+Start it with your Google API key set as a environment variable: `GOOGLE_API_KEY=_myapikey_ node-red`
+
+In the NodeRED flow editor add the following nodes to the nodes palette (in the main menu choose the _Manage palette_ option):
+
+- Simplicité nodes: `node-red-contrib-simplicite`
+- Sentiment analysis nodes: `node-red-node-sentiment`
+- Watson nodes: `node-red-node-watson`
+
+Import the flows available in the `RST_NODERED_NODES` resource of the module.
+
+Configure the config node with your instance settings.
+]]></mdl_comment>
 	</data>
 </object>
 <object>
@@ -114,10 +170,44 @@ The nodes of the frontend are stored in the `RST_NODERED_NODES` resource.]]></md
 		<usr_menu_defdomain_id.obd_name/>
 		<usr_extra>1</usr_extra>
 		<usr_subhead>0</usr_subhead>
-		<usr_logout>2016-07-26 09:44:01</usr_logout>
-		<usr_last_logon/>
+		<usr_logout>2020-02-28 18:44:31</usr_logout>
+		<usr_last_logon>2020-02-28 18:20:50</usr_last_logon>
 		<usr_dateformat/>
 		<usr_uuid>15f0e20a-a0a9-48db-bb42-42bb363e0290</usr_uuid>
+	</data>
+	<data>
+		<usr_login>rstfrontend</usr_login>
+		<usr_lang>ENU</usr_lang>
+		<usr_image_id>files/User/rstfrontend.png</usr_image_id>
+		<usr_timezone/>
+		<usr_minrows>10</usr_minrows>
+		<usr_maxrows>20</usr_maxrows>
+		<usr_active>3</usr_active>
+		<usr_title/>
+		<usr_last_name>Restaurants frontend</usr_last_name>
+		<usr_first_name/>
+		<usr_email/>
+		<usr_home_id.viw_name>RstHome</usr_home_id.viw_name>
+		<usr_work_num/>
+		<usr_home_num/>
+		<usr_cell_num/>
+		<usr_address1/>
+		<usr_address2/>
+		<usr_zipcode/>
+		<usr_city/>
+		<usr_state/>
+		<usr_country/>
+		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
+		<usr_menu>1</usr_menu>
+		<usr_menu_defhidden>0</usr_menu_defhidden>
+		<usr_menu_defcollapsed>0</usr_menu_defcollapsed>
+		<usr_menu_defdomain_id.obd_name/>
+		<usr_extra>1</usr_extra>
+		<usr_subhead>0</usr_subhead>
+		<usr_logout>2020-02-28 18:44:51</usr_logout>
+		<usr_last_logon>2020-02-28 20:10:56</usr_last_logon>
+		<usr_dateformat/>
+		<usr_uuid/>
 	</data>
 </object>
 <object>
@@ -125,6 +215,89 @@ The nodes of the frontend are stored in the `RST_NODERED_NODES` resource.]]></md
 	<action>upsert</action>
 	<data>
 		<usp_user_id.usr_login>rstadmin</usp_user_id.usr_login>
+		<usp_param_id.sys_code>CLIENT_ID</usp_param_id.sys_code>
+		<usp_value><![CDATA[[{
+ "dt": "2020-02-28 18:17:32",
+ "ag": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36",
+ "id": "qBrPcrqOSFLYrEuDfaWJhuHfSkjGaRuSeghlhWOFvCtYyjlKmMSCAjHWzqYeqkVt1570003684464"
+}]]]></usp_value>
+		<usp_param_id.sys_type/>
+		<usp_param_id.sys_value><![CDATA[empty]]></usp_param_id.sys_value>
+		<usp_param_id.sys_desc/>
+		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
+	</data>
+	<data>
+		<usp_user_id.usr_login>rstadmin</usp_user_id.usr_login>
+		<usp_param_id.sys_code>FIREBASE_TOKENS</usp_param_id.sys_code>
+		<usp_value><![CDATA[[{
+ "agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36",
+ "token": "e7dBSH1q6Po:APA91bFnxF1jZtHoB8UN2Cd4FDHIHOlf0j_Jk-Bc352k7drFelUuaifPfcKYGQzlTw40sjWNUYDCFPPBvtEhnaHn83WmC5uRLCsXBLxbEn23IyGtAv2xzr9vq5nEKAkYXX_qMoUURQ1F"
+}]]]></usp_value>
+		<usp_param_id.sys_type/>
+		<usp_param_id.sys_value><![CDATA[empty]]></usp_param_id.sys_value>
+		<usp_param_id.sys_desc/>
+		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
+	</data>
+	<data>
+		<usp_user_id.usr_login>rstadmin</usp_user_id.usr_login>
+		<usp_param_id.sys_code>HISTORY RstHome</usp_param_id.sys_code>
+		<usp_value><![CDATA[[]]]></usp_value>
+		<usp_param_id.sys_type/>
+		<usp_param_id.sys_value><![CDATA[empty]]></usp_param_id.sys_value>
+		<usp_param_id.sys_desc/>
+		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
+	</data>
+	<data>
+		<usp_user_id.usr_login>rstadmin</usp_user_id.usr_login>
+		<usp_param_id.sys_code>MENU_STYLE</usp_param_id.sys_code>
+		<usp_value><![CDATA[dropdown]]></usp_value>
+		<usp_param_id.sys_type>LFL</usp_param_id.sys_type>
+		<usp_param_id.sys_value><![CDATA[accordion]]></usp_param_id.sys_value>
+		<usp_param_id.sys_desc><![CDATA[**Menu style**:
+
+- `standard` Standard menu (left),
+- `simple` Simple menu (left)
+- `accordion` Accordion menu (left),
+- `split` Split menu (top and left),
+- `dropdown` Dropdown menu (top)]]></usp_param_id.sys_desc>
+		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
+	</data>
+	<data>
+		<usp_user_id.usr_login>rstfrontend</usp_user_id.usr_login>
+		<usp_param_id.sys_code>CLIENT_ID</usp_param_id.sys_code>
+		<usp_value><![CDATA[[{
+ "dt": "2020-02-28 18:17:32",
+ "ag": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36",
+ "id": "qBrPcrqOSFLYrEuDfaWJhuHfSkjGaRuSeghlhWOFvCtYyjlKmMSCAjHWzqYeqkVt1570003684464"
+}]]]></usp_value>
+		<usp_param_id.sys_type/>
+		<usp_param_id.sys_value><![CDATA[empty]]></usp_param_id.sys_value>
+		<usp_param_id.sys_desc/>
+		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
+	</data>
+	<data>
+		<usp_user_id.usr_login>rstfrontend</usp_user_id.usr_login>
+		<usp_param_id.sys_code>FIREBASE_TOKENS</usp_param_id.sys_code>
+		<usp_value><![CDATA[[{
+ "agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36",
+ "token": "e7dBSH1q6Po:APA91bFnxF1jZtHoB8UN2Cd4FDHIHOlf0j_Jk-Bc352k7drFelUuaifPfcKYGQzlTw40sjWNUYDCFPPBvtEhnaHn83WmC5uRLCsXBLxbEn23IyGtAv2xzr9vq5nEKAkYXX_qMoUURQ1F"
+}]]]></usp_value>
+		<usp_param_id.sys_type/>
+		<usp_param_id.sys_value><![CDATA[empty]]></usp_param_id.sys_value>
+		<usp_param_id.sys_desc/>
+		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
+	</data>
+	<data>
+		<usp_user_id.usr_login>rstfrontend</usp_user_id.usr_login>
+		<usp_param_id.sys_code>HISTORY RstHome</usp_param_id.sys_code>
+		<usp_value><![CDATA[[]]]></usp_value>
+		<usp_param_id.sys_type/>
+		<usp_param_id.sys_value><![CDATA[empty]]></usp_param_id.sys_value>
+		<usp_param_id.sys_desc/>
+		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
+	</data>
+	<data>
+		<usp_user_id.usr_login>rstfrontend</usp_user_id.usr_login>
 		<usp_param_id.sys_code>MENU_STYLE</usp_param_id.sys_code>
 		<usp_value><![CDATA[dropdown]]></usp_value>
 		<usp_param_id.sys_type>LFL</usp_param_id.sys_type>
@@ -151,8 +324,8 @@ The nodes of the frontend are stored in the `RST_NODERED_NODES` resource.]]></md
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
 	<data>
-		<grp_name>RST_PUBLIC</grp_name>
-		<grp_comment><![CDATA[Restaurant demo public access]]></grp_comment>
+		<grp_name>RST_FRONTEND</grp_name>
+		<grp_comment><![CDATA[Restaurant demo frontend technical user]]></grp_comment>
 		<grp_type>G</grp_type>
 		<grp_parent_id.grp_name/>
 		<grp_home_id.viw_name/>
@@ -191,7 +364,7 @@ The nodes of the frontend are stored in the `RST_NODERED_NODES` resource.]]></md
 	</data>
 	<data>
 		<rsp_login_id.usr_login>public</rsp_login_id.usr_login>
-		<rsp_group_id.grp_name>RST_PUBLIC</rsp_group_id.grp_name>
+		<rsp_group_id.grp_name>RST_FRONTEND</rsp_group_id.grp_name>
 		<rsp_start_dt>2015-01-01</rsp_start_dt>
 		<rsp_end_dt/>
 		<rsp_activ>1</rsp_activ>
@@ -200,6 +373,14 @@ The nodes of the frontend are stored in the `RST_NODERED_NODES` resource.]]></md
 	<data>
 		<rsp_login_id.usr_login>rstadmin</rsp_login_id.usr_login>
 		<rsp_group_id.grp_name>RST_ADMIN</rsp_group_id.grp_name>
+		<rsp_start_dt>2000-01-01</rsp_start_dt>
+		<rsp_end_dt/>
+		<rsp_activ>1</rsp_activ>
+		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
+	</data>
+	<data>
+		<rsp_login_id.usr_login>rstfrontend</rsp_login_id.usr_login>
+		<rsp_group_id.grp_name>RST_FRONTEND</rsp_group_id.grp_name>
 		<rsp_start_dt>2000-01-01</rsp_start_dt>
 		<rsp_end_dt/>
 		<rsp_activ>1</rsp_activ>
@@ -4026,19 +4207,19 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
 	<data>
-		<fct_name>RstComment-CU</fct_name>
+		<fct_name>RstComment-C</fct_name>
 		<fct_object_id.obj_type>O</fct_object_id.obj_type>
 		<fct_object_id.obj_name>RstComments</fct_object_id.obj_name>
-		<fct_function>CM</fct_function>
+		<fct_function>C</fct_function>
 		<fct_action_id.act_name/>
 		<fct_view_id.viw_name/>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
 	<data>
-		<fct_name>RstComment-U</fct_name>
+		<fct_name>RstComment-CUD</fct_name>
 		<fct_object_id.obj_type>O</fct_object_id.obj_type>
 		<fct_object_id.obj_name>RstComments</fct_object_id.obj_name>
-		<fct_function>M</fct_function>
+		<fct_function>CMS</fct_function>
 		<fct_action_id.act_name/>
 		<fct_view_id.viw_name/>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -4094,16 +4275,6 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 	<action>upsert</action>
 	<data>
 		<grt_group_id.grp_name>RST_ADMIN</grt_group_id.grp_name>
-		<grt_function_id.fct_name>RstComment-U</grt_function_id.fct_name>
-		<grt_function_id.fct_object_id.obj_type>O</grt_function_id.fct_object_id.obj_type>
-		<grt_function_id.fct_object_id.obj_name>RstComments</grt_function_id.fct_object_id.obj_name>
-		<grt_function_id.fct_action_id.act_name/>
-		<grt_function_id.fct_function>M</grt_function_id.fct_function>
-		<grt_activ>1</grt_activ>
-		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
-	</data>
-	<data>
-		<grt_group_id.grp_name>RST_ADMIN</grt_group_id.grp_name>
 		<grt_function_id.fct_name>RestaurantsDemo-D</grt_function_id.fct_name>
 		<grt_function_id.fct_object_id.obj_type>D</grt_function_id.fct_object_id.obj_type>
 		<grt_function_id.fct_object_id.obj_name>RstDomain</grt_function_id.fct_object_id.obj_name>
@@ -4143,17 +4314,17 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
 	<data>
-		<grt_group_id.grp_name>RST_PUBLIC</grt_group_id.grp_name>
-		<grt_function_id.fct_name>RstComment-CU</grt_function_id.fct_name>
+		<grt_group_id.grp_name>RST_FRONTEND</grt_group_id.grp_name>
+		<grt_function_id.fct_name>RstComment-C</grt_function_id.fct_name>
 		<grt_function_id.fct_object_id.obj_type>O</grt_function_id.fct_object_id.obj_type>
 		<grt_function_id.fct_object_id.obj_name>RstComments</grt_function_id.fct_object_id.obj_name>
 		<grt_function_id.fct_action_id.act_name/>
-		<grt_function_id.fct_function>CM</grt_function_id.fct_function>
+		<grt_function_id.fct_function>C</grt_function_id.fct_function>
 		<grt_activ>1</grt_activ>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
 	<data>
-		<grt_group_id.grp_name>RST_PUBLIC</grt_group_id.grp_name>
+		<grt_group_id.grp_name>RST_FRONTEND</grt_group_id.grp_name>
 		<grt_function_id.fct_name>RstLocation-R</grt_function_id.fct_name>
 		<grt_function_id.fct_object_id.obj_type>O</grt_function_id.fct_object_id.obj_type>
 		<grt_function_id.fct_object_id.obj_name>RstLocation</grt_function_id.fct_object_id.obj_name>
@@ -4163,7 +4334,7 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
 	<data>
-		<grt_group_id.grp_name>RST_PUBLIC</grt_group_id.grp_name>
+		<grt_group_id.grp_name>RST_FRONTEND</grt_group_id.grp_name>
 		<grt_function_id.fct_name>RstRestaurant-R</grt_function_id.fct_name>
 		<grt_function_id.fct_object_id.obj_type>O</grt_function_id.fct_object_id.obj_type>
 		<grt_function_id.fct_object_id.obj_name>RstRestaurant</grt_function_id.fct_object_id.obj_name>
