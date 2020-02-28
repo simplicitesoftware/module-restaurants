@@ -38,8 +38,8 @@ components:
           description: Status
           type: string
           enum:
-          - CLOSED
           - OPEN
+          - CLOSED
         rstRstWebSite:
           description: Web site
           type: string
@@ -358,13 +358,7 @@ components:
           type: string
         rstCmtEval:
           description: Evaluation
-          type: string
-          enum:
-          - '100'
-          - '75'
-          - '50'
-          - '25'
-          - '0'
+          type: integer
         rstCmtCommentsInEnglish:
           description: Free text comments translated in **english**
           type: string
@@ -1153,8 +1147,8 @@ paths:
       - schema:
           type: string
           enum:
-          - CLOSED
           - OPEN
+          - CLOSED
         in: query
         name: rstRstStatus
         description: Search filter for Status
@@ -1629,13 +1623,7 @@ paths:
         description: Search filter for State (e.g. `NY`)
         required: false
       - schema:
-          type: string
-          enum:
-          - '100'
-          - '75'
-          - '50'
-          - '25'
-          - '0'
+          type: integer
         in: query
         name: rstCmtEval
         description: Search filter for Evaluation

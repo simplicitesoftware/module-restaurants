@@ -622,8 +622,8 @@ paths:
         type: string
         required: false
         enum:
-        - CLOSED
         - OPEN
+        - CLOSED
       - in: query
         name: rstRstNbComments
         description: Search filter for Number of comments
@@ -1037,14 +1037,8 @@ paths:
       - in: query
         name: rstCmtEval
         description: Search filter for Evaluation
-        type: string
+        type: integer
         required: false
-        enum:
-        - '100'
-        - '75'
-        - '50'
-        - '25'
-        - '0'
       - in: query
         name: rstCmtSentiment
         description: Search filter for Sentiment score
@@ -1136,8 +1130,8 @@ definitions:
         description: Status
         type: string
         enum:
-        - CLOSED
         - OPEN
+        - CLOSED
       rstRstWebSite:
         description: Web site
         type: string
@@ -1456,13 +1450,7 @@ definitions:
         type: string
       rstCmtEval:
         description: Evaluation
-        type: string
-        enum:
-        - '100'
-        - '75'
-        - '50'
-        - '25'
-        - '0'
+        type: integer
       rstCmtCommentsInEnglish:
         description: Free text comments translated in **english**
         type: string

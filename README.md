@@ -36,7 +36,7 @@ Customer comments on a restaurant. Includes:
 | _Ref. `rstCmtRstId.rstRstName`_                              | _char(100)_                              |          |           |          | _Name_                                                                           |
 | _Ref. `rstCmtRstId.rstRstAddress`_                           | _char(255)_                              |          |           |          | _Address_                                                                        |
 | _Ref. `rstCmtRstId.rstRstState`_                             | _enum(2) using `RST_STATES` list_        |          |           |          | _State (e.g. `NY`)_                                                              |
-| `rstCmtEval`                                                 | enum(3) using `RST_EVAL` list            | yes      | yes       |          | Evaluation                                                                       |
+| `rstCmtEval`                                                 | int(1) using `RST_EVAL` list             | yes      | yes       |          | Evaluation                                                                       |
 | `rstCmtSentiment`                                            | int(2)                                   |          | yes       |          | Sentiment score                                                                  |
 | `rstCmtComments`                                             | text(4000)                               |          | yes       |          | Free text comments in **native** language                                        |
 | `rstCmtCommentsInEnglish`                                    | text(4000)                               |          |           |          | Free text comments translated in **english**                                     |
@@ -97,12 +97,6 @@ Customer comments on a restaurant. Includes:
     - `WV` West Virginia
     - `WI` Wisconsin
     - `WY` Wyoming
-* `RST_EVAL`
-    - `100` Very good
-    - `75` Good
-    - `50` Average
-    - `25` Bad
-    - `0` Very bad
 
 `RstLocation` business object definition
 ----------------------------------------
