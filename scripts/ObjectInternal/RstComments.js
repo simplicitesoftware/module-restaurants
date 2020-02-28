@@ -1,5 +1,5 @@
 RstComments.postLoad = function() {
-	if (!this.getGrant().hasResponsibility("RST_PUBLIC")) {
+	if (!this.getGrant().hasResponsibility("RST_FRONTEND")) {
 		// These fields are only writeable by public profile
 		this.getField("rstCmtEmail").setUpdatable(false);
 		this.getField("rstCmtRstId").setUpdatable(false);
@@ -52,5 +52,9 @@ RstComments.preValidate = function() {
 RstComments.postSave = function() {
 	// Update restaurant stats using SQL for efficiency
 	this.getGrant().update("update rst_restaurant a set a.rst_nbcomments = (select count(*) from rst_comments b where a.row_id = b.cmt_rst_id) where a.row_id = " + this.getFieldValue("rstCmtRstId"));
-	this.getGrant().update("update rst_restaurant a set a.rst_rating = (select avg(cast(cmt_eval as decimal(11, 0))) from rst_comments b where a.row_id = b.cmt_rst_id) where a.row_id = " + this.getFieldValue("rstCmtRstId"));
+	this.getGrant().update("update rst_restaurant a set a.rst_rating = (select avg(cast(cmt_eval as decimal(11, 0)) * 20) from rst_comments b where a.row_id = b.cmt_rst_id) where a.row_id = " + this.getFieldValue("rstCmtRstId"));
+};
+
+RstComments.postDelete = function() {
+	RstComments.postSave.call(this);
 };
