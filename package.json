@@ -1,12 +1,10 @@
 {
-    "date": "Tue Feb 13 21:07:51 CET 2018",
+    "date": "Fri Feb 28 14:52:12 CET 2020",
     "name": "RestaurantsDemo",
     "format": "xml",
-    "description": "This module is a demo inspired from a famous travelers\nadvisor web sites.\n\nIt is the backend to a NodeRED&reg; frontend web application.",
-    "repository": {
-        "type": "url",
-        "url": "https://www.simplicite.io/resources/modules/restaurantsdemo-app-3.1.xml"
-    },
-    "version": "3.1",
+    "description": "This module is a very simple restaurant rating application demo\ninspired by a famous travelers' advisor service.\n\nIt is the business backend to a NodeRED&reg; frontend web application.\n\nThe nodes of the frontend are stored in the `RST_NODERED_NODES` resource.",
+    "files": ["RestaurantsDemo.xml"],
+    "repository": {"origin": {"uri": "https://github.com/simplicitesoftware/module-restaurants.git"}},
+    "version": "4.0",
     "dependencies": [{"Simplicite": "4.0"}]
 }

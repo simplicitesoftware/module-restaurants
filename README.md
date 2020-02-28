@@ -1,13 +1,22 @@
-![](https://www.simplicite.io/resources//logos/logo250.png)
+<!--
+ ___ _            _ _    _ _    __
+/ __(_)_ __  _ __| (_)__(_) |_ /_/
+\__ \ | '  \| '_ \ | / _| |  _/ -_)
+|___/_|_|_|_| .__/_|_\__|_|\__\___|
+            |_| 
+-->
+![](https://docs.simplicite.io//logos/logo250.png)
 * * *
 
 `RestaurantsDemo` module definition
 ===================================
 
-This module is a demo inspired from a famous travelers
-advisor web sites.
+This module is a very simple restaurant rating application demo
+inspired by a famous travelers' advisor service.
 
-It is the backend to a NodeRED&reg; frontend web application.
+It is the business backend to a NodeRED&reg; frontend web application.
+
+The nodes of the frontend are stored in the `RST_NODERED_NODES` resource.
 
 `RstComments` business object definition
 ----------------------------------------
@@ -19,20 +28,20 @@ Customer comments on a restaurant. Includes:
 
 ### Fields
 
-| Name                                                         | Type                                     | Req | Upd | Description                                                                      | 
-| ------------------------------------------------------------ | ---------------------------------------- | --- | --- | -------------------------------------------------------------------------------- |
-| `rstCmtDateTime`                                             | datetime                                 | x*  |     | Date and time                                                                    |
-| `rstCmtEmail`                                                | char(100)                                | x   | x   | Customer's name                                                                  |
-| `rstCmtRstId` link to **`RstRestaurant`**                    | id                                       | x*  | x   | Restaurant                                                                       |
-| _Ref. `rstCmtRstId.rstRstName`_                              | _char(100)_                              |     |     | _Name_                                                                           |
-| _Ref. `rstCmtRstId.rstRstAddress`_                           | _char(255)_                              |     |     | _Address_                                                                        |
-| _Ref. `rstCmtRstId.rstRstState`_                             | _enum(7) using `RST_STATES` list_        |     |     | _State (e.g. `NY`)_                                                              |
-| `rstCmtEval`                                                 | enum(7) using `RST_EVAL` list            | x   | x   | Evaluation                                                                       |
-| `rstCmtSentiment`                                            | int(2)                                   |     | x   | Sentiment score                                                                  |
-| `rstCmtComments`                                             | text(4000)                               |     | x   | Free text comments                                                               |
-| `rstCmtCommentsInEnglish`                                    | text(4000)                               |     |     | Free text coomments translated in english                                        |
-| `rstCmtTones`                                                | text(4000)                               |     | x   | Watson tones                                                                     |
-| `rstCmtVisible`                                              | boolean                                  |     | x   | Visible?                                                                         |
+| Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      | 
+| ------------------------------------------------------------ | ---------------------------------------- | -------- | --------- | -------- | -------------------------------------------------------------------------------- |
+| `rstCmtDateTime`                                             | datetime                                 | yes*     |           |          | Date and time                                                                    |
+| `rstCmtEmail`                                                | char(100)                                | yes      | yes       |          | Customer's name                                                                  |
+| `rstCmtRstId` link to **`RstRestaurant`**                    | id                                       | yes*     | yes       |          | Restaurant                                                                       |
+| _Ref. `rstCmtRstId.rstRstName`_                              | _char(100)_                              |          |           |          | _Name_                                                                           |
+| _Ref. `rstCmtRstId.rstRstAddress`_                           | _char(255)_                              |          |           |          | _Address_                                                                        |
+| _Ref. `rstCmtRstId.rstRstState`_                             | _enum(2) using `RST_STATES` list_        |          |           |          | _State (e.g. `NY`)_                                                              |
+| `rstCmtEval`                                                 | enum(3) using `RST_EVAL` list            | yes      | yes       |          | Evaluation                                                                       |
+| `rstCmtSentiment`                                            | int(2)                                   |          | yes       |          | Sentiment score                                                                  |
+| `rstCmtComments`                                             | text(4000)                               |          | yes       |          | Free text comments                                                               |
+| `rstCmtCommentsInEnglish`                                    | text(4000)                               |          |           |          | Free text coomments translated in english                                        |
+| `rstCmtTones`                                                | text(4000)                               |          | yes       |          | Watson tones                                                                     |
+| `rstCmtVisible`                                              | boolean                                  |          | yes       |          | Visible?                                                                         |
 
 ### Lists
 
@@ -95,10 +104,6 @@ Customer comments on a restaurant. Includes:
     - `25` Bad
     - `0` Very bad
 
-### Custom actions
-
-No custom action
-
 `RstLocation` business object definition
 ----------------------------------------
 
@@ -106,13 +111,13 @@ Location
 
 ### Fields
 
-| Name                                                         | Type                                     | Req | Upd | Description                                                                      | 
-| ------------------------------------------------------------ | ---------------------------------------- | --- | --- | -------------------------------------------------------------------------------- |
-| `rstLocName`                                                 | char(100)                                | x*  | x   | Location name                                                                    |
-| `rstLocState`                                                | enum(7) using `RST_STATES` list          | x*  | x   | Location state                                                                   |
-| `rstLocDescription`                                          | html(4000)                               |     | x   | Location description                                                             |
-| `rstLocCoordinates`                                          | geocoords                                | x   | x   | Location coordinates                                                             |
-| `rstLocExtent`                                               | int(10)                                  | x   | x   | Location extent (miles)                                                          |
+| Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      | 
+| ------------------------------------------------------------ | ---------------------------------------- | -------- | --------- | -------- | -------------------------------------------------------------------------------- |
+| `rstLocName`                                                 | char(100)                                | yes*     | yes       |          | Location name                                                                    |
+| `rstLocState`                                                | enum(2) using `RST_STATES` list          | yes*     | yes       |          | Location state                                                                   |
+| `rstLocDescription`                                          | html(4000)                               |          | yes       |          | Location description                                                             |
+| `rstLocCoordinates`                                          | geocoords                                | yes      | yes       |          | Location coordinates                                                             |
+| `rstLocExtent`                                               | int(10)                                  | yes      | yes       |          | Location extent (miles)                                                          |
 
 ### Lists
 
@@ -181,25 +186,25 @@ The restaurants without a name or a state are ignored
 
 ### Fields
 
-| Name                                                         | Type                                     | Req | Upd | Description                                                                      | 
-| ------------------------------------------------------------ | ---------------------------------------- | --- | --- | -------------------------------------------------------------------------------- |
-| `rstRstName`                                                 | char(100)                                | x*  |     | Name                                                                             |
-| `rstRstState`                                                | enum(7) using `RST_STATES` list          |     |     | State (e.g. `NY`)                                                                |
-| `rstRstCuisine`                                              | char(50)                                 |     |     | Cuisine type                                                                     |
-| `rstRstWebSite`                                              | url(100)                                 |     |     | Web site                                                                         |
-| `rstRstAddress`                                              | char(255)                                |     |     | Address                                                                          |
-| `rstRstCoordinates`                                          | geocoords                                |     |     | Geographical coordinates                                                         |
-| `rstRstTimestamp`                                            | datetime                                 |     |     | Data timestamp                                                                   |
-| `rstRstStatus`                                               | enum(7) using `RST_STATUS` list          |     | x   | Status                                                                           |
-| `rstRstNbComments`                                           | int(10)                                  |     |     | Number of comments                                                               |
-| `rstRstRating`                                               | float(11, 0)                             |     |     | Rating                                                                           |
-| `rstRstDescription`                                          | html(4000)                               |     | x   | Description                                                                      |
-| `rstRstPicture`                                              | image                                    |     | x   | Picture                                                                          |
-| `rstRstLocId` link to **`RstLocation`**                      | id                                       | x   | x   | -                                                                                |
-| _Ref. `rstRstLocId.rstLocName`_                              | _char(100)_                              |     |     | _Location name_                                                                  |
-| _Ref. `rstRstLocId.rstLocState`_                             | _enum(7) using `RST_STATES` list_        |     |     | _Location state_                                                                 |
-| _Ref. `rstRstLocId.rstLocCoordinates`_                       | _geocoords_                              |     |     | _Location coordinates_                                                           |
-| _Ref. `rstRstLocId.rstLocExtent`_                            | _int(10)_                                |     |     | _Location extent (miles)_                                                        |
+| Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      | 
+| ------------------------------------------------------------ | ---------------------------------------- | -------- | --------- | -------- | -------------------------------------------------------------------------------- |
+| `rstRstName`                                                 | char(100)                                | yes*     |           |          | Name                                                                             |
+| `rstRstState`                                                | enum(2) using `RST_STATES` list          |          |           |          | State (e.g. `NY`)                                                                |
+| `rstRstCuisine`                                              | char(50)                                 |          |           |          | Cuisine type                                                                     |
+| `rstRstWebSite`                                              | url(100)                                 |          |           |          | Web site                                                                         |
+| `rstRstAddress`                                              | char(255)                                |          |           |          | Address                                                                          |
+| `rstRstCoordinates`                                          | geocoords                                |          |           |          | Geographical coordinates                                                         |
+| `rstRstTimestamp`                                            | datetime                                 |          |           |          | Data timestamp                                                                   |
+| `rstRstStatus`                                               | enum(10) using `RST_STATUS` list         |          | yes       |          | Status                                                                           |
+| `rstRstNbComments`                                           | int(10)                                  |          |           |          | Number of comments                                                               |
+| `rstRstRating`                                               | float(11, 0)                             |          |           |          | Rating                                                                           |
+| `rstRstDescription`                                          | html(4000)                               |          | yes       |          | Description                                                                      |
+| `rstRstPicture`                                              | image                                    |          | yes       |          | Picture                                                                          |
+| `rstRstLocId` link to **`RstLocation`**                      | id                                       | yes      | yes       |          | -                                                                                |
+| _Ref. `rstRstLocId.rstLocName`_                              | _char(100)_                              |          |           |          | _Location name_                                                                  |
+| _Ref. `rstRstLocId.rstLocState`_                             | _enum(2) using `RST_STATES` list_        |          |           |          | _Location state_                                                                 |
+| _Ref. `rstRstLocId.rstLocCoordinates`_                       | _geocoords_                              |          |           |          | _Location coordinates_                                                           |
+| _Ref. `rstRstLocId.rstLocExtent`_                            | _int(10)_                                |          |           |          | _Location extent (miles)_                                                        |
 
 ### Lists
 
@@ -258,8 +263,4 @@ The restaurants without a name or a state are ignored
 * `RST_STATUS`
     - `CLOSED` Code CLOSED
     - `OPEN` Code OPEN
-
-### Custom actions
-
-No custom action
 
