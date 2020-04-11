@@ -64,7 +64,7 @@ var RstODSTools = (function() {
 		}
 	
 		loc.getGrant().delAccessCreate(rst.getName());
-	};
+	}
 
 	return { loadRestaurants: loadRestaurants };
 })();
