@@ -1117,6 +1117,7 @@ definitions:
       rstRstCoordinates:
         description: Geographical coordinates
         type: string
+        example: latitude;longitude
       rstRstRating:
         description: Rating
         type: number
@@ -1138,6 +1139,7 @@ definitions:
       rstRstTimestamp:
         description: Data timestamp
         type: string
+        example: yyyy-MM-dd HH:mm:ss
       rstRstState:
         description: State (e.g. `NY`)
         type: string
@@ -1208,6 +1210,7 @@ definitions:
       rstRstLocId__rstLocCoordinates:
         description: Location coordinates
         type: string
+        example: latitude;longitude
       rstRstLocId__rstLocState:
         description: Location state
         type: string
@@ -1278,6 +1281,7 @@ definitions:
       rstLocCoordinates:
         description: Location coordinates
         type: string
+        example: latitude;longitude
       rstLocState:
         description: Location state
         type: string
@@ -1378,6 +1382,7 @@ definitions:
       rstCmtDateTime:
         description: Date and time
         type: string
+        example: yyyy-MM-dd HH:mm:ss
       rstCmtSentiment:
         description: Sentiment score
         type: integer

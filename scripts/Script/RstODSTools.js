@@ -1,4 +1,4 @@
-RstODSTools = (function() {
+var RstODSTools = (function() {
 	function loadRestaurants(loc) {
 		var g = loc.getGrant();
 		
@@ -54,14 +54,17 @@ RstODSTools = (function() {
 				if (!errs || errs.size() == 0) {
 					var err = rst.save();
 					if (err) console.error(err);
-				} else
+				} else {
 					for (var k = 0; k < errs.size(); k++)
 						console.error(errs.get(k));
-			} else
+				}
+			} else {
 				console.warning("Ignored record " + name);
+			}
 		}
 	
 		loc.getGrant().delAccessCreate(rst.getName());
 	};
+
 	return { loadRestaurants: loadRestaurants };
 })();
