@@ -1,4 +1,4 @@
-var RstODSTools = (function() {
+var RstODSTools = RstODSTools || (function() {
 	function loadRestaurants(loc) {
 		var g = loc.getGrant();
 		

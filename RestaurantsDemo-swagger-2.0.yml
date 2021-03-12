@@ -2,7 +2,7 @@
 # / __(_)_ __  _ __| (_)__(_) |_ /_/
 # \__ \ | '  \| '_ \ | / _| |  _/ -_)
 # |___/_|_|_|_| .__/_|_\__|_|\__\___|
-#             |_| Module: RestaurantsDemo 4.0
+#             |_| Module: RestaurantsDemo 5
 paths:
   /rest/RstComments/{row_id}:
     post:
@@ -622,8 +622,8 @@ paths:
         type: string
         required: false
         enum:
-        - OPEN
         - CLOSED
+        - OPEN
       - in: query
         name: rstRstNbComments
         description: Search filter for Number of comments
@@ -1131,8 +1131,8 @@ definitions:
         description: Status
         type: string
         enum:
-        - OPEN
         - CLOSED
+        - OPEN
       rstRstWebSite:
         description: Web site
         type: string
@@ -1532,7 +1532,7 @@ info:
     email: contact@simplicitesoftware.com
   description: API for module RestaurantsDemo
   title: RestaurantsDemo
-  version: '4.0'
+  version: '5'
 tags:
 - name: RstComments
   description: Comments

@@ -2,7 +2,7 @@
 # / __(_)_ __  _ __| (_)__(_) |_ /_/
 # \__ \ | '  \| '_ \ | / _| |  _/ -_)
 # |___/_|_|_|_| .__/_|_\__|_|\__\___|
-#             |_| Module: RestaurantsDemo 4.0
+#             |_| Module: RestaurantsDemo 5
 components:
   schemas:
     Error404:
@@ -39,8 +39,8 @@ components:
           description: Status
           type: string
           enum:
-          - OPEN
           - CLOSED
+          - OPEN
         rstRstWebSite:
           description: Web site
           type: string
@@ -1152,8 +1152,8 @@ paths:
       - schema:
           type: string
           enum:
-          - OPEN
           - CLOSED
+          - OPEN
         in: query
         name: rstRstStatus
         description: Search filter for Status
@@ -1701,7 +1701,7 @@ info:
     email: contact@simplicitesoftware.com
   description: API for module RestaurantsDemo
   title: RestaurantsDemo
-  version: '4.0'
+  version: '5'
 tags:
 - name: RstComments
   description: Comments

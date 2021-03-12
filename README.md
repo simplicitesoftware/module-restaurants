@@ -75,87 +75,6 @@ Import the flows available in the `RST_NODERED_NODES` resource of the module.
 
 Configure the config node with your instance settings.
 
-
-`RstComments` business object definition
-----------------------------------------
-
-Customer comments on a restaurant. Includes:
-
-* an quantified evaluation
-* free text comments
-
-### Fields
-
-| Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      | 
-| ------------------------------------------------------------ | ---------------------------------------- | -------- | --------- | -------- | -------------------------------------------------------------------------------- |
-| `rstCmtDateTime`                                             | datetime                                 | yes*     |           |          | Date and time                                                                    |
-| `rstCmtEmail`                                                | char(100)                                | yes      | yes       |          | Customer's name                                                                  |
-| `rstCmtRstId` link to **`RstRestaurant`**                    | id                                       | yes*     | yes       |          | Restaurant                                                                       |
-| _Ref. `rstCmtRstId.rstRstName`_                              | _char(100)_                              |          |           |          | _Name_                                                                           |
-| _Ref. `rstCmtRstId.rstRstAddress`_                           | _char(255)_                              |          |           |          | _Address_                                                                        |
-| _Ref. `rstCmtRstId.rstRstState`_                             | _enum(2) using `RST_STATES` list_        |          |           |          | _State (e.g. `NY`)_                                                              |
-| `rstCmtEval`                                                 | int(1) using `RST_EVAL` list             | yes      | yes       |          | Evaluation                                                                       |
-| `rstCmtSentiment`                                            | int(2)                                   |          | yes       |          | Sentiment score                                                                  |
-| `rstCmtComments`                                             | text(4000)                               |          | yes       |          | Free text comments in **native** language                                        |
-| `rstCmtCommentsInEnglish`                                    | text(4000)                               |          |           |          | Free text comments translated in **english**                                     |
-| `rstCmtTones`                                                | text(4000)                               |          | yes       |          | Watson tones                                                                     |
-| `rstCmtVisible`                                              | boolean                                  |          | yes       |          | Visible?                                                                         |
-
-### Lists
-
-* `RST_STATES`
-    - `AL` Alabama
-    - `AK` Alaska
-    - `AZ` Arizona
-    - `AR` Arkansas
-    - `CA` California
-    - `CO` Colorado
-    - `CT` Connecticut
-    - `DE` Delaware
-    - `DC` District of Columbia
-    - `FL` Florida
-    - `GA` Georgia
-    - `HI` Hawaii
-    - `ID` Idaho
-    - `IL` Illinois
-    - `IN` Indiana
-    - `IA` Iowa
-    - `KS` Kansas
-    - `KY` Kentucky
-    - `LA` Louisiana
-    - `ME` Maine
-    - `MD` Maryland
-    - `MA` Massachusetts
-    - `MI` Michigan
-    - `MN` Minnesota
-    - `MS` Mississippi
-    - `MO` Missouri
-    - `MT` Montana
-    - `NE` Nebraska
-    - `NV` Nevada
-    - `NH` New Hampshire
-    - `NJ` New Jersey
-    - `NM` New Mexico
-    - `NY` New York
-    - `NC` North Carolina
-    - `ND` North Dakota
-    - `OH` Ohio
-    - `OK` Oklahoma
-    - `OR` Oregon
-    - `PA` Pennsylvania
-    - `RI` Rhode Island
-    - `SC` South Carolina
-    - `SD` South Dakota
-    - `TN` Tennessee
-    - `TX` Texas
-    - `UT` Utah
-    - `VT` Vermont
-    - `VA` Virginia
-    - `WA` Washington
-    - `WV` West Virginia
-    - `WI` Wisconsin
-    - `WY` Wyoming
-
 `RstLocation` business object definition
 ----------------------------------------
 
@@ -163,8 +82,8 @@ Location
 
 ### Fields
 
-| Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      | 
-| ------------------------------------------------------------ | ---------------------------------------- | -------- | --------- | -------- | -------------------------------------------------------------------------------- |
+| Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      |
+|--------------------------------------------------------------|------------------------------------------|----------|-----------|----------|----------------------------------------------------------------------------------|
 | `rstLocName`                                                 | char(100)                                | yes*     | yes       |          | Location name                                                                    |
 | `rstLocState`                                                | enum(2) using `RST_STATES` list          | yes*     | yes       |          | Location state                                                                   |
 | `rstLocDescription`                                          | html(4000)                               |          | yes       |          | Location description                                                             |
@@ -238,8 +157,8 @@ The restaurants without a name or a state are ignored
 
 ### Fields
 
-| Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      | 
-| ------------------------------------------------------------ | ---------------------------------------- | -------- | --------- | -------- | -------------------------------------------------------------------------------- |
+| Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      |
+|--------------------------------------------------------------|------------------------------------------|----------|-----------|----------|----------------------------------------------------------------------------------|
 | `rstRstName`                                                 | char(100)                                | yes*     |           |          | Name                                                                             |
 | `rstRstState`                                                | enum(2) using `RST_STATES` list          |          |           |          | State (e.g. `NY`)                                                                |
 | `rstRstCuisine`                                              | char(50)                                 |          |           |          | Cuisine type                                                                     |
@@ -315,4 +234,84 @@ The restaurants without a name or a state are ignored
 * `RST_STATUS`
     - `CLOSED` Code CLOSED
     - `OPEN` Code OPEN
+
+`RstComments` business object definition
+----------------------------------------
+
+Customer comments on a restaurant. Includes:
+
+* an quantified evaluation
+* free text comments
+
+### Fields
+
+| Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      |
+|--------------------------------------------------------------|------------------------------------------|----------|-----------|----------|----------------------------------------------------------------------------------|
+| `rstCmtDateTime`                                             | datetime                                 | yes*     |           |          | Date and time                                                                    |
+| `rstCmtEmail`                                                | char(100)                                | yes      | yes       |          | Customer's name                                                                  |
+| `rstCmtRstId` link to **`RstRestaurant`**                    | id                                       | yes*     | yes       |          | Restaurant                                                                       |
+| _Ref. `rstCmtRstId.rstRstName`_                              | _char(100)_                              |          |           |          | _Name_                                                                           |
+| _Ref. `rstCmtRstId.rstRstAddress`_                           | _char(255)_                              |          |           |          | _Address_                                                                        |
+| _Ref. `rstCmtRstId.rstRstState`_                             | _enum(2) using `RST_STATES` list_        |          |           |          | _State (e.g. `NY`)_                                                              |
+| `rstCmtEval`                                                 | int(1) using `RST_EVAL` list             | yes      | yes       |          | Evaluation                                                                       |
+| `rstCmtSentiment`                                            | int(2)                                   |          | yes       |          | Sentiment score                                                                  |
+| `rstCmtComments`                                             | text(4000)                               |          | yes       |          | Free text comments in **native** language                                        |
+| `rstCmtCommentsInEnglish`                                    | text(4000)                               |          |           |          | Free text comments translated in **english**                                     |
+| `rstCmtTones`                                                | text(4000)                               |          | yes       |          | Watson tones                                                                     |
+| `rstCmtVisible`                                              | boolean                                  |          | yes       |          | Visible?                                                                         |
+
+### Lists
+
+* `RST_STATES`
+    - `AL` Alabama
+    - `AK` Alaska
+    - `AZ` Arizona
+    - `AR` Arkansas
+    - `CA` California
+    - `CO` Colorado
+    - `CT` Connecticut
+    - `DE` Delaware
+    - `DC` District of Columbia
+    - `FL` Florida
+    - `GA` Georgia
+    - `HI` Hawaii
+    - `ID` Idaho
+    - `IL` Illinois
+    - `IN` Indiana
+    - `IA` Iowa
+    - `KS` Kansas
+    - `KY` Kentucky
+    - `LA` Louisiana
+    - `ME` Maine
+    - `MD` Maryland
+    - `MA` Massachusetts
+    - `MI` Michigan
+    - `MN` Minnesota
+    - `MS` Mississippi
+    - `MO` Missouri
+    - `MT` Montana
+    - `NE` Nebraska
+    - `NV` Nevada
+    - `NH` New Hampshire
+    - `NJ` New Jersey
+    - `NM` New Mexico
+    - `NY` New York
+    - `NC` North Carolina
+    - `ND` North Dakota
+    - `OH` Ohio
+    - `OK` Oklahoma
+    - `OR` Oregon
+    - `PA` Pennsylvania
+    - `RI` Rhode Island
+    - `SC` South Carolina
+    - `SD` South Dakota
+    - `TN` Tennessee
+    - `TX` Texas
+    - `UT` Utah
+    - `VT` Vermont
+    - `VA` Virginia
+    - `WA` Washington
+    - `WV` West Virginia
+    - `WI` Wisconsin
+    - `WY` Wyoming
 

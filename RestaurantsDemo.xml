@@ -5,7 +5,7 @@
 	<action>upsert</action>
 	<data>
 		<mdl_name>RestaurantsDemo</mdl_name>
-		<mdl_version>4.0</mdl_version>
+		<mdl_version>5</mdl_version>
 		<mdl_prefix/>
 		<mdl_url><![CDATA[{
 	"type": "git",
@@ -76,8 +76,7 @@ In the NodeRED flow editor add the following nodes to the nodes palette (in the 
 
 Import the flows available in the `RST_NODERED_NODES` resource of the module.
 
-Configure the config node with your instance settings.
-]]></mdl_comment>
+Configure the config node with your instance settings.]]></mdl_comment>
 	</data>
 </object>
 <object>
@@ -111,6 +110,7 @@ Configure the config node with your instance settings.
 		<thm_menu_sact_t/>
 		<thm_menu_sta_c/>
 		<thm_menu_sta_t/>
+		<thm_compact/>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
 </object>
@@ -126,6 +126,7 @@ Configure the config node with your instance settings.
 		<viw_scope/>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 		<viw_theme_id.thm_name>restaurants</viw_theme_id.thm_name>
+		<viw_lang/>
 	</data>
 </object>
 <object>
@@ -144,21 +145,21 @@ Configure the config node with your instance settings.
 	<name>User</name>
 	<action>upsert</action>
 	<data>
-		<usr_login>rstadmin</usr_login>
-		<usr_lang>ENU</usr_lang>
 		<usr_image_id>files/User/rstadmin.jpg</usr_image_id>
+		<usr_login>rstadmin</usr_login>
 		<usr_timezone/>
 		<usr_minrows>10</usr_minrows>
 		<usr_maxrows>20</usr_maxrows>
-		<usr_active>1</usr_active>
 		<usr_title/>
-		<usr_last_name>Restaurants</usr_last_name>
 		<usr_first_name/>
+		<usr_last_name>Restaurants</usr_last_name>
+		<usr_lang>ENU</usr_lang>
 		<usr_email/>
-		<usr_home_id.viw_name>RstHome</usr_home_id.viw_name>
 		<usr_work_num/>
 		<usr_home_num/>
 		<usr_cell_num/>
+		<usr_active>1</usr_active>
+		<usr_home_id.viw_name>RstHome</usr_home_id.viw_name>
 		<usr_address1/>
 		<usr_address2/>
 		<usr_zipcode/>
@@ -167,32 +168,30 @@ Configure the config node with your instance settings.
 		<usr_country/>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 		<usr_menu>1</usr_menu>
-		<usr_menu_defhidden>0</usr_menu_defhidden>
 		<usr_menu_defcollapsed>0</usr_menu_defcollapsed>
 		<usr_menu_defdomain_id.obd_name/>
-		<usr_extra>1</usr_extra>
-		<usr_subhead>0</usr_subhead>
 		<usr_logout>2020-02-28 18:44:31</usr_logout>
 		<usr_last_logon>2020-02-28 18:20:50</usr_last_logon>
 		<usr_dateformat/>
+		<usr_lang_pref>ENU</usr_lang_pref>
 		<usr_uuid>15f0e20a-a0a9-48db-bb42-42bb363e0290</usr_uuid>
 	</data>
 	<data>
-		<usr_login>rstfrontend</usr_login>
-		<usr_lang>ENU</usr_lang>
 		<usr_image_id>files/User/rstfrontend.png</usr_image_id>
+		<usr_login>rstfrontend</usr_login>
 		<usr_timezone/>
 		<usr_minrows>10</usr_minrows>
 		<usr_maxrows>20</usr_maxrows>
-		<usr_active>3</usr_active>
 		<usr_title/>
-		<usr_last_name>Restaurants frontend</usr_last_name>
 		<usr_first_name/>
+		<usr_last_name>Restaurants frontend</usr_last_name>
+		<usr_lang>ENU</usr_lang>
 		<usr_email/>
-		<usr_home_id.viw_name>RstHome</usr_home_id.viw_name>
 		<usr_work_num/>
 		<usr_home_num/>
 		<usr_cell_num/>
+		<usr_active>3</usr_active>
+		<usr_home_id.viw_name>RstHome</usr_home_id.viw_name>
 		<usr_address1/>
 		<usr_address2/>
 		<usr_zipcode/>
@@ -201,14 +200,12 @@ Configure the config node with your instance settings.
 		<usr_country/>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 		<usr_menu>1</usr_menu>
-		<usr_menu_defhidden>0</usr_menu_defhidden>
 		<usr_menu_defcollapsed>0</usr_menu_defcollapsed>
 		<usr_menu_defdomain_id.obd_name/>
-		<usr_extra>1</usr_extra>
-		<usr_subhead>0</usr_subhead>
 		<usr_logout>2020-02-28 18:44:51</usr_logout>
 		<usr_last_logon>2020-02-28 22:59:58</usr_last_logon>
 		<usr_dateformat/>
+		<usr_lang_pref>ENU</usr_lang_pref>
 		<usr_uuid/>
 	</data>
 </object>
@@ -1615,10 +1612,9 @@ Configure the config node with your instance settings.
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray>0</fld_tray>
+		<fld_tray/>
 		<fld_type>13</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>0</fld_copy>
 		<fld_size>4000</fld_size>
@@ -1633,6 +1629,7 @@ Configure the config node with your instance settings.
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Free text comments in **native** language]]></fld_comment>
@@ -1652,10 +1649,9 @@ Configure the config node with your instance settings.
 		<fld_more>1</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray>0</fld_tray>
+		<fld_tray/>
 		<fld_type>13</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>0</fld_copy>
 		<fld_size>4000</fld_size>
@@ -1670,6 +1666,7 @@ Configure the config node with your instance settings.
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Free text comments translated in **english**]]></fld_comment>
@@ -1692,7 +1689,6 @@ Configure the config node with your instance settings.
 		<fld_tray/>
 		<fld_type>5</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>0</fld_copy>
 		<fld_size>19</fld_size>
@@ -1707,6 +1703,7 @@ Configure the config node with your instance settings.
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Date and time]]></fld_comment>
@@ -1729,7 +1726,6 @@ Configure the config node with your instance settings.
 		<fld_tray/>
 		<fld_type>3</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>0</fld_copy>
 		<fld_size>100</fld_size>
@@ -1744,6 +1740,7 @@ Configure the config node with your instance settings.
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Customer's name]]></fld_comment>
@@ -1763,10 +1760,9 @@ Configure the config node with your instance settings.
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray>0</fld_tray>
+		<fld_tray/>
 		<fld_type>1</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist>RST_EVAL</fld_enumlist>
 		<fld_list_id.lov_name>RST_EVAL</fld_list_id.lov_name>
 		<fld_copy>0</fld_copy>
 		<fld_size>1</fld_size>
@@ -1781,6 +1777,7 @@ Configure the config node with your instance settings.
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering>STARS</fld_rendering>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Evaluation]]></fld_comment>
@@ -1803,7 +1800,6 @@ Configure the config node with your instance settings.
 		<fld_tray/>
 		<fld_type>0</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>11</fld_size>
@@ -1818,6 +1814,7 @@ Configure the config node with your instance settings.
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering>FKPS</fld_rendering>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Restaurant]]></fld_comment>
@@ -1840,7 +1837,6 @@ Configure the config node with your instance settings.
 		<fld_tray/>
 		<fld_type>1</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>0</fld_copy>
 		<fld_size>2</fld_size>
@@ -1855,6 +1851,7 @@ Configure the config node with your instance settings.
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Sentiment score]]></fld_comment>
@@ -1877,7 +1874,6 @@ Configure the config node with your instance settings.
 		<fld_tray/>
 		<fld_type>13</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>0</fld_copy>
 		<fld_size>4000</fld_size>
@@ -1892,6 +1888,7 @@ Configure the config node with your instance settings.
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Watson tones]]></fld_comment>
@@ -1914,7 +1911,6 @@ Configure the config node with your instance settings.
 		<fld_tray/>
 		<fld_type>8</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>1</fld_size>
@@ -1929,6 +1925,7 @@ Configure the config node with your instance settings.
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Visible?]]></fld_comment>
@@ -1951,7 +1948,6 @@ Configure the config node with your instance settings.
 		<fld_tray/>
 		<fld_type>25</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>0</fld_copy>
 		<fld_size>30</fld_size>
@@ -1966,6 +1962,7 @@ Configure the config node with your instance settings.
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Location coordinates]]></fld_comment>
@@ -1988,7 +1985,6 @@ Configure the config node with your instance settings.
 		<fld_tray/>
 		<fld_type>11</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>0</fld_copy>
 		<fld_size>4000</fld_size>
@@ -2003,6 +1999,7 @@ Configure the config node with your instance settings.
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Location description]]></fld_comment>
@@ -2025,7 +2022,6 @@ Configure the config node with your instance settings.
 		<fld_tray/>
 		<fld_type>1</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>0</fld_copy>
 		<fld_size>10</fld_size>
@@ -2040,6 +2036,7 @@ Configure the config node with your instance settings.
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Location extent (miles)]]></fld_comment>
@@ -2062,7 +2059,6 @@ Configure the config node with your instance settings.
 		<fld_tray/>
 		<fld_type>3</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>0</fld_copy>
 		<fld_size>100</fld_size>
@@ -2077,6 +2073,7 @@ Configure the config node with your instance settings.
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Location name]]></fld_comment>
@@ -2099,7 +2096,6 @@ Configure the config node with your instance settings.
 		<fld_tray/>
 		<fld_type>7</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist>RST_STATES</fld_enumlist>
 		<fld_list_id.lov_name>RST_STATES</fld_list_id.lov_name>
 		<fld_copy>0</fld_copy>
 		<fld_size>2</fld_size>
@@ -2114,6 +2110,7 @@ Configure the config node with your instance settings.
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Location state]]></fld_comment>
@@ -2136,7 +2133,6 @@ Configure the config node with your instance settings.
 		<fld_tray/>
 		<fld_type>3</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>255</fld_size>
@@ -2151,6 +2147,7 @@ Configure the config node with your instance settings.
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Address]]></fld_comment>
@@ -2173,7 +2170,6 @@ Configure the config node with your instance settings.
 		<fld_tray/>
 		<fld_type>25</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>30</fld_size>
@@ -2188,6 +2184,7 @@ Configure the config node with your instance settings.
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Geographical coordinates]]></fld_comment>
@@ -2210,7 +2207,6 @@ Configure the config node with your instance settings.
 		<fld_tray/>
 		<fld_type>3</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>0</fld_copy>
 		<fld_size>50</fld_size>
@@ -2225,6 +2221,7 @@ Configure the config node with your instance settings.
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Cuisine type]]></fld_comment>
@@ -2247,7 +2244,6 @@ Configure the config node with your instance settings.
 		<fld_tray/>
 		<fld_type>11</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>4000</fld_size>
@@ -2262,6 +2258,7 @@ Configure the config node with your instance settings.
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Description]]></fld_comment>
@@ -2284,7 +2281,6 @@ Configure the config node with your instance settings.
 		<fld_tray/>
 		<fld_type>0</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>11</fld_size>
@@ -2299,6 +2295,7 @@ Configure the config node with your instance settings.
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -2321,7 +2318,6 @@ Configure the config node with your instance settings.
 		<fld_tray/>
 		<fld_type>8</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>0</fld_copy>
 		<fld_size>1</fld_size>
@@ -2336,6 +2332,7 @@ Configure the config node with your instance settings.
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Monitoring?]]></fld_comment>
@@ -2358,7 +2355,6 @@ Configure the config node with your instance settings.
 		<fld_tray/>
 		<fld_type>3</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>0</fld_copy>
 		<fld_size>100</fld_size>
@@ -2373,6 +2369,7 @@ Configure the config node with your instance settings.
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Name]]></fld_comment>
@@ -2395,7 +2392,6 @@ Configure the config node with your instance settings.
 		<fld_tray/>
 		<fld_type>1</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>0</fld_copy>
 		<fld_size>10</fld_size>
@@ -2410,6 +2406,7 @@ Configure the config node with your instance settings.
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Number of comments]]></fld_comment>
@@ -2432,7 +2429,6 @@ Configure the config node with your instance settings.
 		<fld_tray/>
 		<fld_type>20</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>0</fld_copy>
 		<fld_size>11</fld_size>
@@ -2447,6 +2443,7 @@ Configure the config node with your instance settings.
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Picture]]></fld_comment>
@@ -2469,7 +2466,6 @@ Configure the config node with your instance settings.
 		<fld_tray/>
 		<fld_type>2</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>11</fld_size>
@@ -2484,6 +2480,7 @@ Configure the config node with your instance settings.
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Rating]]></fld_comment>
@@ -2506,7 +2503,6 @@ Configure the config node with your instance settings.
 		<fld_tray/>
 		<fld_type>7</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist>RST_STATES</fld_enumlist>
 		<fld_list_id.lov_name>RST_STATES</fld_list_id.lov_name>
 		<fld_copy>1</fld_copy>
 		<fld_size>2</fld_size>
@@ -2521,6 +2517,7 @@ Configure the config node with your instance settings.
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[State (e.g. `NY`)]]></fld_comment>
@@ -2543,7 +2540,6 @@ Configure the config node with your instance settings.
 		<fld_tray/>
 		<fld_type>7</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist>RST_STATUS</fld_enumlist>
 		<fld_list_id.lov_name>RST_STATUS</fld_list_id.lov_name>
 		<fld_copy>0</fld_copy>
 		<fld_size>10</fld_size>
@@ -2558,6 +2554,7 @@ Configure the config node with your instance settings.
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Status]]></fld_comment>
@@ -2580,7 +2577,6 @@ Configure the config node with your instance settings.
 		<fld_tray/>
 		<fld_type>5</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
 		<fld_size>19</fld_size>
@@ -2595,6 +2591,7 @@ Configure the config node with your instance settings.
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Data timestamp]]></fld_comment>
@@ -2617,7 +2614,6 @@ Configure the config node with your instance settings.
 		<fld_tray/>
 		<fld_type>10</fld_type>
 		<fld_type_id.flt_code/>
-		<fld_enumlist/>
 		<fld_list_id.lov_name/>
 		<fld_copy>0</fld_copy>
 		<fld_size>100</fld_size>
@@ -2632,6 +2628,7 @@ Configure the config node with your instance settings.
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Web site]]></fld_comment>
@@ -2997,6 +2994,8 @@ Configure the config node with your instance settings.
 		<obo_btn_merge>P</obo_btn_merge>
 		<obo_btn_save>1</obo_btn_save>
 		<obo_btn_saveclose>1</obo_btn_saveclose>
+		<obo_btn_savenew>1</obo_btn_savenew>
+		<obo_btn_savecopy>1</obo_btn_savecopy>
 		<obo_btn_close>1</obo_btn_close>
 		<obo_tray>1</obo_tray>
 		<obo_dashboard>1</obo_dashboard>
@@ -3059,6 +3058,8 @@ Configure the config node with your instance settings.
 		<obo_btn_merge>P</obo_btn_merge>
 		<obo_btn_save>1</obo_btn_save>
 		<obo_btn_saveclose>1</obo_btn_saveclose>
+		<obo_btn_savenew>1</obo_btn_savenew>
+		<obo_btn_savecopy>1</obo_btn_savecopy>
 		<obo_btn_close>1</obo_btn_close>
 		<obo_tray>1</obo_tray>
 		<obo_dashboard>1</obo_dashboard>
@@ -3122,6 +3123,8 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<obo_btn_merge>P</obo_btn_merge>
 		<obo_btn_save>1</obo_btn_save>
 		<obo_btn_saveclose>1</obo_btn_saveclose>
+		<obo_btn_savenew>1</obo_btn_savenew>
+		<obo_btn_savecopy>1</obo_btn_savecopy>
 		<obo_btn_close>1</obo_btn_close>
 		<obo_tray>1</obo_tray>
 		<obo_dashboard>1</obo_dashboard>
@@ -4398,6 +4401,7 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<cax_unitscale/>
 		<cax_unitfunct/>
 		<cax_unitlabel/>
+		<cax_yaxis>L</cax_yaxis>
 	</data>
 	<data>
 		<cax_crosstab_id.ctb_name>RstComments-T1</cax_crosstab_id.ctb_name>
@@ -4418,6 +4422,7 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<cax_unitscale/>
 		<cax_unitfunct/>
 		<cax_unitlabel/>
+		<cax_yaxis>L</cax_yaxis>
 	</data>
 	<data>
 		<cax_crosstab_id.ctb_name>RstRestaurant-T1</cax_crosstab_id.ctb_name>
@@ -4438,6 +4443,7 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<cax_unitscale/>
 		<cax_unitfunct/>
 		<cax_unitlabel/>
+		<cax_yaxis>L</cax_yaxis>
 	</data>
 	<data>
 		<cax_crosstab_id.ctb_name>RstRestaurant-T1</cax_crosstab_id.ctb_name>
@@ -4458,6 +4464,7 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<cax_unitscale/>
 		<cax_unitfunct/>
 		<cax_unitlabel/>
+		<cax_yaxis>L</cax_yaxis>
 	</data>
 </object>
 <object>
