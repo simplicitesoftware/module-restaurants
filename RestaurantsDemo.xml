@@ -6,14 +6,14 @@
 	<data>
 		<mdl_name>RestaurantsDemo</mdl_name>
 		<mdl_version>5</mdl_version>
-		<mdl_prefix/>
+		<mdl_prefix>rst</mdl_prefix>
 		<mdl_url><![CDATA[{
 	"type": "git",
 	"origin": {
 		"uri": "https://github.com/simplicitesoftware/module-restaurants.git"
 	}
 }]]></mdl_url>
-		<mdl_lastupd>2020-02-28 20:20:46</mdl_lastupd>
+		<mdl_type>A</mdl_type>
 		<mdl_comment><![CDATA[[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=simplicite-modules-RestaurantsDemo&metric=alert_status)](https://sonarcloud.io/dashboard?id=simplicite-modules-RestaurantsDemo)
 
 ### Introduction
@@ -94,7 +94,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 		<thm_color3/>
 		<thm_text3/>
 		<thm_base>light</thm_base>
-		<thm_css_doc>files/Theme/restaurants/restaurants_gen.css</thm_css_doc>
 		<thm_addon/>
 		<thm_searchbox/>
 		<thm_active/>
@@ -175,6 +174,8 @@ Configure the config node with your instance settings.]]></mdl_comment>
 		<usr_last_logon>2020-02-28 18:20:50</usr_last_logon>
 		<usr_dateformat/>
 		<usr_lang_pref>ENU</usr_lang_pref>
+		<usr_mfa_method/>
+		<usr_mfa_settings/>
 		<usr_uuid>15f0e20a-a0a9-48db-bb42-42bb363e0290</usr_uuid>
 	</data>
 	<data>
@@ -207,6 +208,8 @@ Configure the config node with your instance settings.]]></mdl_comment>
 		<usr_last_logon>2020-02-28 22:59:58</usr_last_logon>
 		<usr_dateformat/>
 		<usr_lang_pref>ENU</usr_lang_pref>
+		<usr_mfa_method/>
+		<usr_mfa_settings/>
 		<usr_uuid/>
 	</data>
 </object>
@@ -1079,7 +1082,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_EVAL</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>100</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>1</lov_code_id.lov_order_by>
 		<lov_lang>ENU</lov_lang>
 		<lov_value><![CDATA[Very good]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1087,7 +1089,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_EVAL</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>75</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>2</lov_code_id.lov_order_by>
 		<lov_lang>ENU</lov_lang>
 		<lov_value><![CDATA[Good]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1095,7 +1096,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_EVAL</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>50</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>3</lov_code_id.lov_order_by>
 		<lov_lang>ENU</lov_lang>
 		<lov_value><![CDATA[Average]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1103,7 +1103,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_EVAL</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>25</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>4</lov_code_id.lov_order_by>
 		<lov_lang>ENU</lov_lang>
 		<lov_value><![CDATA[Bad]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1111,7 +1110,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_EVAL</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>0</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>5</lov_code_id.lov_order_by>
 		<lov_lang>ENU</lov_lang>
 		<lov_value><![CDATA[Very bad]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1119,7 +1117,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_EVAL</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>100</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>1</lov_code_id.lov_order_by>
 		<lov_lang>FRA</lov_lang>
 		<lov_value><![CDATA[Très bon]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1127,7 +1124,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_EVAL</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>75</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>2</lov_code_id.lov_order_by>
 		<lov_lang>FRA</lov_lang>
 		<lov_value><![CDATA[Bon]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1135,7 +1131,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_EVAL</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>50</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>3</lov_code_id.lov_order_by>
 		<lov_lang>FRA</lov_lang>
 		<lov_value><![CDATA[Moyen]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1143,7 +1138,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_EVAL</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>25</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>4</lov_code_id.lov_order_by>
 		<lov_lang>FRA</lov_lang>
 		<lov_value><![CDATA[Mauvais]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1151,7 +1145,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_EVAL</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>0</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>5</lov_code_id.lov_order_by>
 		<lov_lang>FRA</lov_lang>
 		<lov_value><![CDATA[Très mauvais]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1159,7 +1152,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>AL</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>1</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[Alabama]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1167,7 +1159,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>AK</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>2</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[Alaska]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1175,7 +1166,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>AZ</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>3</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[Arizona]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1183,7 +1173,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>AR</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>4</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[Arkansas]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1191,7 +1180,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>CA</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>5</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[California]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1199,7 +1187,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>CO</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>6</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[Colorado]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1207,7 +1194,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>CT</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>7</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[Connecticut]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1215,7 +1201,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>DE</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>8</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[Delaware]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1223,7 +1208,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>DC</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>9</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[District of Columbia]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1231,7 +1215,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>FL</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>10</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[Florida]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1239,7 +1222,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>GA</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>11</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[Georgia]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1247,7 +1229,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>HI</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>12</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[Hawaii]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1255,7 +1236,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>ID</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>13</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[Idaho]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1263,7 +1243,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>IL</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>14</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[Illinois]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1271,7 +1250,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>IN</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>15</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[Indiana]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1279,7 +1257,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>IA</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>16</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[Iowa]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1287,7 +1264,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>KS</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>17</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[Kansas]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1295,7 +1271,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>KY</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>18</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[Kentucky]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1303,7 +1278,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>LA</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>19</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[Louisiana]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1311,7 +1285,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>ME</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>20</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[Maine]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1319,7 +1292,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>MD</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>21</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[Maryland]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1327,7 +1299,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>MA</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>22</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[Massachusetts]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1335,7 +1306,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>MI</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>23</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[Michigan]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1343,7 +1313,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>MN</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>24</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[Minnesota]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1351,7 +1320,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>MS</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>25</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[Mississippi]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1359,7 +1327,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>MO</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>26</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[Missouri]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1367,7 +1334,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>MT</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>27</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[Montana]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1375,7 +1341,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>NE</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>28</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[Nebraska]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1383,7 +1348,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>NV</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>29</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[Nevada]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1391,7 +1355,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>NH</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>30</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[New Hampshire]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1399,7 +1362,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>NJ</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>31</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[New Jersey]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1407,7 +1369,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>NM</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>32</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[New Mexico]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1415,7 +1376,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>NY</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>33</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[New York]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1423,7 +1383,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>NC</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>34</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[North Carolina]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1431,7 +1390,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>ND</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>35</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[North Dakota]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1439,7 +1397,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>OH</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>36</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[Ohio]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1447,7 +1404,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>OK</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>37</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[Oklahoma]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1455,7 +1411,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>OR</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>38</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[Oregon]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1463,7 +1418,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>PA</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>39</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[Pennsylvania]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1471,7 +1425,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>RI</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>40</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[Rhode Island]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1479,7 +1432,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>SC</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>41</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[South Carolina]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1487,7 +1439,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>SD</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>42</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[South Dakota]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1495,7 +1446,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>TN</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>43</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[Tennessee]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1503,7 +1453,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>TX</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>44</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[Texas]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1511,7 +1460,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>UT</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>45</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[Utah]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1519,7 +1467,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>VT</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>46</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[Vermont]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1527,7 +1474,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>VA</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>47</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[Virginia]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1535,7 +1481,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>WA</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>48</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[Washington]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1543,7 +1488,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>WV</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>49</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[West Virginia]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1551,7 +1495,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>WI</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>50</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[Wisconsin]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1559,7 +1502,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATES</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>WY</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>51</lov_code_id.lov_order_by>
 		<lov_lang>ANY</lov_lang>
 		<lov_value><![CDATA[Wyoming]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1567,7 +1509,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATUS</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>CLOSED</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>1</lov_code_id.lov_order_by>
 		<lov_lang>ENU</lov_lang>
 		<lov_value><![CDATA[Closed]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1575,7 +1516,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATUS</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>OPEN</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>1</lov_code_id.lov_order_by>
 		<lov_lang>ENU</lov_lang>
 		<lov_value><![CDATA[Open]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1583,7 +1523,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATUS</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>CLOSED</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>1</lov_code_id.lov_order_by>
 		<lov_lang>FRA</lov_lang>
 		<lov_value><![CDATA[Fermée]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -1591,7 +1530,6 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<lov_code_id.lov_list_id.lov_name>RST_STATUS</lov_code_id.lov_list_id.lov_name>
 		<lov_code_id.lov_code>OPEN</lov_code_id.lov_code>
-		<lov_code_id.lov_order_by>1</lov_code_id.lov_order_by>
 		<lov_lang>FRA</lov_lang>
 		<lov_value><![CDATA[Ouverte]]></lov_value>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
@@ -2941,6 +2879,7 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<obo_name>RstComments</obo_name>
 		<obo_dbtable>rst_comments</obo_dbtable>
+		<obo_role>OBJ</obo_role>
 		<obo_class/>
 		<obo_script_id>scripts/ObjectInternal/RstComments.js</obo_script_id>
 		<obo_usets>1</obo_usets>
@@ -3010,6 +2949,7 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<obo_name>RstLocation</obo_name>
 		<obo_dbtable>rst_location</obo_dbtable>
+		<obo_role>OBJ</obo_role>
 		<obo_class/>
 		<obo_script_id>scripts/ObjectInternal/RstLocation.js</obo_script_id>
 		<obo_usets>1</obo_usets>
@@ -3076,6 +3016,7 @@ Configure the config node with your instance settings.]]></mdl_comment>
 	<data>
 		<obo_name>RstRestaurant</obo_name>
 		<obo_dbtable>rst_restaurant</obo_dbtable>
+		<obo_role>OBJ</obo_role>
 		<obo_class/>
 		<obo_script_id/>
 		<obo_usets>1</obo_usets>
@@ -4576,7 +4517,6 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<res_code>restaurant</res_code>
 		<res_cached>1</res_cached>
 		<res_file/>
-		<res_file_compiled/>
 		<res_image>resources/Disposition/default/restaurant.png</res_image>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
@@ -4594,7 +4534,6 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<res_code>restaurants-module</res_code>
 		<res_cached>0</res_cached>
 		<res_file/>
-		<res_file_compiled/>
 		<res_image>resources/Disposition/default/restaurants-module.svg</res_image>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
@@ -4612,7 +4551,6 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<res_code>restaurants-module-screenshot</res_code>
 		<res_cached>0</res_cached>
 		<res_file/>
-		<res_file_compiled/>
 		<res_image>resources/Disposition/default/restaurants-module-screenshot.png</res_image>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
@@ -4630,7 +4568,6 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<res_code>RST_FRONTLOGO</res_code>
 		<res_cached>0</res_cached>
 		<res_file/>
-		<res_file_compiled/>
 		<res_image>resources/Disposition/default/RST_FRONTLOGO.png</res_image>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
@@ -4648,7 +4585,6 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<res_code>RST_LOGO</res_code>
 		<res_cached>1</res_cached>
 		<res_file/>
-		<res_file_compiled/>
 		<res_image>resources/Disposition/default/RST_LOGO.png</res_image>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
@@ -4666,7 +4602,6 @@ The restaurants without a name or a state are ignored]]></obo_comment>
 		<res_code>RST_NODERED_NODES</res_code>
 		<res_cached>0</res_cached>
 		<res_file>resources/Disposition/default/RST_NODERED_NODES.json</res_file>
-		<res_file_compiled/>
 		<res_image/>
 		<row_module_id.mdl_name>RestaurantsDemo</row_module_id.mdl_name>
 	</data>
