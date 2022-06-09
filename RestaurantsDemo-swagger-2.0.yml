@@ -622,8 +622,8 @@ paths:
         type: string
         required: false
         enum:
-        - OPEN
         - CLOSED
+        - OPEN
       - in: query
         name: rstRstNbComments
         description: Search filter for Number of comments
@@ -740,6 +740,39 @@ paths:
           description: Unauthorized
       tags:
       - session
+  /rest/RstRestaurant/{row_id}/placemap:RstRestaurants:
+    get:
+      summary: Call a place map for RstRestaurant business object
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-rstrestaurant-placemap-rstrestaurants
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/PlaceMapData'
+          description: Success in calling the place map adat
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      tags:
+      - RstRestaurant
   /rest/RstRestaurant/{row_id}:
     post:
       summary: Create a new RstRestaurantbusiness object record
@@ -902,6 +935,39 @@ paths:
       - RstRestaurant
       consumes:
       - application/json
+  /rest/RstLocation/{row_id}/placemap:RstLocations:
+    get:
+      summary: Call a place map for RstLocation business object
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-rstlocation-placemap-rstlocations
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/PlaceMapData'
+          description: Success in calling the place map adat
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      tags:
+      - RstLocation
   /rest/RstComments:
     get:
       summary: Search RstComments business object records or get contextualized metadata
@@ -1131,8 +1197,8 @@ definitions:
         description: Status
         type: string
         enum:
-        - OPEN
         - CLOSED
+        - OPEN
       rstRstWebSite:
         description: Web site
         type: string
@@ -1365,6 +1431,38 @@ definitions:
         type: string
       content:
         description: Content (plain text or base64 encoded)
+        type: string
+  PlaceData:
+    type: object
+    properties:
+      coord:
+        description: Geographical coordinates
+        type: string
+      address:
+        description: Address
+        type: string
+      row_id:
+        description: Row ID
+        type: string
+      label1:
+        description: 'Label #1'
+        type: string
+      label2:
+        description: 'Label #2'
+        type: string
+      label3:
+        description: 'Label #3'
+        type: string
+  PlaceMapData:
+    type: object
+    properties:
+      places:
+        description: Places
+        type: array
+        items:
+          $ref: '#/definitions/PlaceData'
+      name:
+        description: Name
         type: string
   ArrayOfRstComments:
     type: array
